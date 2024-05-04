@@ -1,0 +1,10 @@
+@font-face {
+  font-family: 'ZvinSerif-Bold';
+  src: url(./ZvinSerif-Bold.eot);
+  src: url(./ZvinSerif-Bold.eot?#iefix) format('embedded-opentype'),
+       url(./ZvinSerif-Bold.otf) format('otf'),
+       url(./ZvinSerif-Bold.svg#ZvinSerif-Bold) format('svg'),
+       url(./ZvinSerif-Bold.ttf) format('truetype'),
+       url(./ZvinSerif-Bold.woff) format('woff'),
+       url(./ZvinSerif-Bold.woff2) format('woff2');
+}

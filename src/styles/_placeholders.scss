@@ -1,0 +1,190 @@
+// %section {
+//   padding-top: 60px;
+//   padding-bottom: 60px;
+
+//   @media screen and (min-width: $desktop) {
+//     padding-top: 94px;
+//     padding-bottom: 94px;
+//   }
+// }
+@import "./variables";
+@import "./mixins";
+
+%title {
+  font-family: $font-primary;
+  font-size: 36px;
+  text-transform: uppercase;
+  color: $primary-black;
+
+  @include tablet {
+  }
+}
+
+%subtitle {
+  font-family: $font-primary;
+  color: $primary-black;
+
+  font-size: 28px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1.4px;
+
+  margin-bottom: 12px;
+
+  @include tabletToLaptop {
+    font-size: 58px;
+
+    margin-bottom: 24px;
+  }
+
+  @include desktop {
+    font-size: 62px;
+
+    margin: 0 0 50px;
+  }
+}
+
+%text {
+  font-family: $font-primary;
+  font-weight: 500;
+  font-size: 18px;
+
+  margin-bottom: 20px;
+
+  @include tabletToLaptop {
+    font-size: 38px;
+    margin-bottom: 40px;
+  }
+
+  @include desktop {
+    font-size: 24px;
+  }
+}
+
+%primaryButton {
+  padding: 15px 30px;
+  border: 2px solid $primary-black;
+  background-color: $primary-black;
+  color: $primary-white;
+
+  font-size: 16px;
+  font-weight: 600;
+
+  @include transition;
+
+  &:hover,
+  &:focus {
+    background-color: $primary-black;
+    border: 2px solid $primary-black;
+  }
+
+  &:active {
+    background-color: transparent;
+    color: $primary-black;
+  }
+
+  @include tabletToLaptop {
+    font-size: 32px;
+
+    padding: 30px 60px;
+  }
+
+  @include desktop {
+    font-size: 30px;
+    padding: 20px 70px;
+  }
+}
+
+%secondaryButton {
+  padding: 10px 30px;
+
+  border: 2px solid $primary-black;
+  background-color: $primary-white;
+  color: $primary-black;
+
+  font-size: 16px;
+  font-weight: 600;
+
+  @include transition;
+
+  &:hover,
+  &:focus {
+    background-color: transparent;
+    color: $primary-black;
+  }
+
+  &:active {
+    background-color: $primary-black;
+    color: $primary-white;
+  }
+
+  @include fromTablet {
+    font-size: 32px;
+    padding: 20px 60px;
+  }
+}
+
+%centeredFlex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+%centeredBlock {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+%visuallyHidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+%container {
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-left: auto;
+  margin-right: auto;
+
+  @include mobile {
+    max-width: $mobile;
+  }
+
+  @include tablet {
+    max-width: $tablet;
+  }
+
+  @include desktop {
+    max-width: $desktop;
+  }
+}
+
+%list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+%link {
+  text-decoration: none;
+  color: inherit;
+}
+
+%blur {
+  font-size: 34px;
+  background: rgba(255, 255, 255, 0.11);
+  border-radius: 8px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+}

@@ -1,0 +1,86 @@
+@import "/src/styles/shared.scss";
+
+.serviceItem {
+  margin-bottom: 40px;
+
+  @include laptopAndDesktop {
+    display: flex;
+    flex-direction: row;
+    gap: 74px;
+
+    margin-bottom: 130px;
+  }
+}
+
+.serviceItem:nth-of-type(2n) {
+  flex-direction: row-reverse;
+}
+
+.serviceBox {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 30px;
+
+  flex-grow: 1;
+
+  @include laptopAndDesktop {
+    flex-basis: calc((55% - 30px * 2) * 2);
+  }
+}
+
+.subtitle {
+  @extend %subtitle;
+  @include desktop {
+    font-size: 52px;
+    font-weight: 400;
+    margin: 0;
+  }
+}
+
+.text {
+  @extend %text;
+  margin: 0;
+  font-size: 18px;
+  color: $medium-grey;
+}
+
+.button {
+  @extend %secondaryButton;
+
+  padding: 8px 60px;
+}
+
+.serviceIndex {
+  @media screen and (max-width: 1024px) {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+  }
+
+  color: $light-grey;
+  font-size: 82px;
+  font-weight: 400;
+}
+
+.thumb {
+  display: block;
+  width: 100%;
+
+  object-fit: cover;
+}
+
+.thumb img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}

@@ -1,0 +1,21 @@
+@import "./fonts";
+
+//fonts
+$font-primary: "Montserrat", sans-serif;
+$font-secondary: "ZvinSerif-Bold";
+
+$section-space: 60px;
+
+// breakpoints
+
+$mobile: 480px;
+
+$tablet: 768px;
+
+$laptop: 1024px;
+
+$desktop: 1200px;
+
+// transitions
+
+$transition-default: 250ms cubic-bezier(0.4, 0, 0.2, 1);

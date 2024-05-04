@@ -1,0 +1,153 @@
+@import "/src/styles/shared.scss";
+
+.hero {
+  width: 100%;
+  min-height: 600px;
+
+  @include tabletToLaptop {
+    min-height: 1140px;
+  }
+
+  @include desktop {
+    min-height: 1170px;
+  }
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-height: 600px;
+  background-color: $primary-grey;
+  background-image: url(../../img/hero/hero720.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+
+  @include retina {
+    background-image: url(../../img/hero/hero1080.jpg);
+  }
+
+  @include tablet {
+    background-image: url(../../img/hero/hero1488.jpg);
+    min-height: 1140px;
+  }
+
+  @include tablet {
+    @include retina {
+      background-image: url(../../img/hero/hero2232.jpg);
+    }
+  }
+
+  @include laptop {
+    background-image: url(../../img/hero/hero2880.jpg);
+    background-position: bottom center;
+    min-height: 1080px;
+  }
+
+  @include laptop {
+    @include retina {
+      background-image: url(../../img/hero/hero4320.jpg);
+      background-position: bottom center;
+    }
+  }
+
+  @include desktop {
+    background-image: url(../../img/hero/hero2880.jpg);
+    background-position: bottom center;
+    min-height: 1170px;
+  }
+
+  @include desktop {
+    @include retina {
+      background-image: url(../../img/hero/hero4320.jpg);
+    }
+  }
+}
+
+.container {
+  position: relative;
+  transform: translate(50%, 90%);
+  left: -50%;
+
+  @include tabletToLaptop {
+    min-height: 1140px;
+
+    transform: translate(50%, 30%);
+  }
+
+  @include desktop {
+    transform: translate(50%, 110%);
+  }
+}
+
+.title {
+  font-family: $font-secondary;
+  font-size: 10vw;
+  text-transform: uppercase;
+  margin: 0 0 12px;
+  text-align: center;
+
+  @include desktop {
+    margin-bottom: 50px;
+    font-size: 92px;
+  }
+}
+
+.text {
+  width: calc(100% - 20px);
+  display: block;
+  margin: 0 auto 16px;
+
+  color: $primary-black;
+
+  text-align: center;
+  font-family: $font-primary;
+
+  position: relative;
+  z-index: 1;
+
+  @include tablet {
+    max-width: 80%;
+    font-size: 4vw;
+  }
+
+  @include laptop {
+    width: 60%;
+    margin-bottom: 30px;
+    font-size: 32px;
+  }
+
+  @include desktop {
+    width: 60%;
+
+    font-size: 34px;
+    background: rgba(255, 255, 255, 0.11);
+    border-radius: 8px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+  }
+}
+
+.button {
+  @extend %centeredBlock;
+  @extend %primaryButton;
+  padding: 15px 30px;
+  @include desktop {
+    font-size: 30px;
+  }
+}
+
+@keyframes textGradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}

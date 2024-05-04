@@ -1,0 +1,55 @@
+@import "./variables";
+
+@mixin mobile {
+  @media screen and (max-width: 767px) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media screen and (min-width: $tablet) and (max-width: 1023px) {
+    @content;
+  }
+}
+
+@mixin fromTablet {
+  @media screen and (min-width: 767px) {
+    @content;
+  }
+}
+
+@mixin laptop {
+  @media screen and (min-width: 1024px) and (max-width: 1199px) {
+    @content;
+  }
+}
+
+@mixin tabletToLaptop {
+  @media screen and (min-width: $tablet) and (max-width: 1199px) {
+    @content;
+  }
+}
+
+@mixin laptopAndDesktop {
+  @media screen and (min-width: $laptop) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media screen and (min-width: $desktop) {
+    @content;
+  }
+}
+
+@mixin retina {
+  @media screen and (-webkit-min-device-pixel-ratio: 2),
+    screen and (min-resolution: 192dpi),
+    screen and (min-resolution: 2dppx) {
+    @content;
+  }
+}
+
+@mixin transition {
+  transition: background-color $transition-default, color $transition-default;
+}

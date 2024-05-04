@@ -1,0 +1,51 @@
+@import "/src/styles/shared.scss";
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-top: 1px solid $primary-black;
+  padding-top: 60px;
+}
+
+.navList {
+  @extend %list;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 40px;
+  margin-bottom: 40px;
+}
+
+.navLink {
+  @extend %text;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 500;
+
+  color: $primary-black;
+}
+
+.socialContainer {
+  display: flex;
+  flex-direction: column;
+
+  margin-bottom: 40px;
+}
+
+.logoLink {
+  text-align: center;
+}
+
+.socialList {
+  @extend %list;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+
+  margin-bottom: 50px;
+}

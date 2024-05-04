@@ -1,0 +1,75 @@
+@import "/src/styles/shared.scss";
+
+.container {
+  @extend %container;
+  position: relative;
+
+  @media screen and (min-width: $tablet) {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.header {
+  position: relative;
+  min-height: 30px;
+  margin-top: 32px;
+  z-index: 1;
+}
+
+.logo {
+  overflow: visible;
+
+  @media screen and (max-width: calc($tablet - 1px)) {
+    display: inline-block;
+    position: relative;
+    z-index: 1;
+  }
+}
+
+.button {
+  @extend %primaryButton;
+  @media screen and (max-width: calc($tablet - 1px)) {
+    position: absolute;
+    top: 0;
+    right: 20px;
+
+    margin: 0;
+    padding: 6px 16px;
+    z-index: 1;
+
+    font-size: 16px;
+
+    cursor: pointer;
+  }
+
+  @media screen and (min-width: $tablet) {
+    display: none;
+  }
+
+  &.isOpen {
+    position: absolute;
+    right: 30px;
+    z-index: 2;
+    background-color: transparent;
+    border: none;
+  }
+}
+
+.number {
+  @extend %text;
+
+  display: flex;
+  align-items: center;
+
+  color: $primary-black;
+
+  text-decoration: none;
+  text-wrap: nowrap;
+  font-size: 20px;
+  font-weight: 400;
+
+  @media screen and (max-width: calc($tablet - 1px)) {
+    display: none;
+  }
+}

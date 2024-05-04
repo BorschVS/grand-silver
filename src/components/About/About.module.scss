@@ -1,0 +1,73 @@
+@import "src/styles/shared.scss";
+
+.about {
+  margin-bottom: 60px;
+}
+
+.container {
+  @extend %container;
+
+  @include desktop {
+    display: flex;
+    flex-direction: row;
+
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  flex-basis: calc(($desktop - 76px) / 2);
+}
+
+.subtitle {
+  @extend %subtitle;
+}
+
+.text {
+  @extend %text;
+
+  @include desktop {
+    max-width: 540px;
+
+    font-size: 24px;
+
+    margin-bottom: 36px;
+  }
+}
+
+.button {
+  @extend %primaryButton;
+
+  @include mobile {
+    margin: 0 0 12px;
+  }
+
+  @include tabletToLaptop {
+    margin: 0 0 24px;
+  }
+
+  @include desktop {
+    font-size: 30px;
+  }
+}
+
+.thumb {
+  width: 100%;
+  @include desktop {
+    width: 540px;
+  }
+}
+
+.picture {
+  width: 100%;
+}
+
+.picture img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}

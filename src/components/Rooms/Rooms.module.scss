@@ -1,0 +1,21 @@
+@import "src/styles/shared.scss";
+
+.subtitle {
+  @extend %subtitle;
+}
+
+.rooms {
+  margin-bottom: $section-space;
+}
+
+.container {
+  @extend %container;
+}
+
+.roomList {
+  @extend %list;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  gap: 30px;
+}

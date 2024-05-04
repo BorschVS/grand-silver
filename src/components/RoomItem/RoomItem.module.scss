@@ -1,0 +1,79 @@
+@import "src/styles/shared.scss";
+
+.roomItem {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  @include desktop {
+    max-width: calc((100% - 2 * 30px) / 3);
+  }
+  transition: translate 500ms ease-in-out;
+}
+
+.roomThumb {
+  width: 100%;
+  height: auto;
+}
+
+.roomThumb img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.roomCard {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+
+  font-size: 22px;
+  font-weight: 700;
+
+  @include laptop {
+    font-size: 20px;
+  }
+
+  @include desktop {
+    width: 100%;
+    font-size: 32px;
+  }
+}
+
+.roomBox {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  flex-grow: 1;
+  justify-content: space-between;
+}
+
+.subtitle {
+  @extend %subtitle;
+  text-transform: capitalize;
+  font-size: 22px;
+
+  @include fromTablet {
+    margin-bottom: 30px;
+  }
+
+  @include fromTablet {
+    font-size: 32px;
+  }
+}
+
+.text {
+  @extend %text;
+  color: $medium-grey;
+  @include tabletToLaptop {
+    font-size: 20px;
+  }
+  @include desktop {
+    font-size: 20px;
+    font-weight: 600;
+  }
+}
+
+.button {
+  @extend %secondaryButton;
+}
