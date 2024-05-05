@@ -9,7 +9,7 @@ const root = createRoot(container);
 
 root.render(
   <React.StrictMode>
-    <BrowserRouter basename="/grand-silver">
+    <BrowserRouter basename="/">
       <App />
     </BrowserRouter>
   </React.StrictMode>
