@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkgrand_silver=self.webpackChunkgrand_silver||[]).push([[377],{1377:(e,r,s)=>{s.r(r),s.d(r,{default:()=>n});var i=s(1591),l=s(579);const n=()=>(0,l.jsx)("main",{children:(0,l.jsx)(i.m,{children:(0,l.jsx)("title",{children:"Service"})})})}}]);
+//# sourceMappingURL=377.cc84ec3a.chunk.js.map
