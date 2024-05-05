@@ -1,4 +1,4 @@
-@import "/src/styles/shared.scss";
+@import '/src/styles/shared.scss';
 
 .hero {
   width: 100%;
@@ -24,6 +24,8 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
+
+  animation: slideToTop 400ms ease-in-out forwards;
 
   @include retina {
     background-image: url(../../img/hero/hero1080.jpg);
@@ -89,6 +91,8 @@
   margin: 0 0 12px;
   text-align: center;
 
+  animation: slideToBot 800ms ease-in-out forwards;
+
   @include desktop {
     margin-bottom: 50px;
     font-size: 92px;
@@ -107,6 +111,8 @@
 
   position: relative;
   z-index: 1;
+
+  animation: fadeIn 800ms ease-in-out forwards;
 
   @include tablet {
     max-width: 80%;
@@ -135,19 +141,40 @@
   @extend %centeredBlock;
   @extend %primaryButton;
   padding: 15px 30px;
+
+  position: relative;
+
+  overflow: hidden;
+
   @include desktop {
     font-size: 30px;
   }
 }
 
-@keyframes textGradient {
-  0% {
-    background-position: 0% 50%;
+.shine {
+  &::before {
+    content: '';
+    position: absolute;
+    top: -90%;
+    left: -100%;
+    width: 50%;
+    height: 200%;
+    background: rgba(214, 214, 214, 0.3);
+    border-radius: 10%;
+    transition: transform 0.8s ease;
+    z-index: 2;
+    animation: shine 1s linear forwards;
   }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    transition: transform 0.8s ease;
+    z-index: 1;
   }
 }

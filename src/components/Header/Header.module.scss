@@ -1,4 +1,4 @@
-@import "/src/styles/shared.scss";
+@import '/src/styles/shared.scss';
 
 .container {
   @extend %container;
@@ -15,6 +15,8 @@
   min-height: 30px;
   margin-top: 32px;
   z-index: 1;
+
+  animation: fadeIn 800ms ease-in-out forwards;
 }
 
 .logo {

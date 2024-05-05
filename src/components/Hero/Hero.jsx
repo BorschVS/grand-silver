@@ -1,6 +1,6 @@
-import styles from "./Hero.module.scss";
+import styles from './Hero.module.scss';
 
-const {hero, overlay, container, title, text, button} = styles;
+const { hero, overlay, container, title, text, button, shine } = styles;
 
 const Hero = () => {
   return (
@@ -12,6 +12,7 @@ const Hero = () => {
             Тут зливаються комфорт, та бездоганне обслуговування.
           </p>
           <button type="button" className={button}>
+            <span className={shine}></span>
             Бронювати
           </button>
         </div>
