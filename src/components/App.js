@@ -17,7 +17,7 @@ export const App = () => {
         <Route path="rooms" element={<Rooms />} />
         <Route path="service" element={<Service />} />
         <Route path="*" element={<NoPage />} />
-      </Route>``
+      </Route>
     </Routes>
   );
 };
