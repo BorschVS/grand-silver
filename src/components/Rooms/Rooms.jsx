@@ -1,17 +1,17 @@
-import RoomItem from "components/RoomItem";
-import { getRooms } from "api/rooms";
-import { useState } from "react";
-import { useSlider } from "hooks/useSlider";
+import RoomItem from 'components/RoomItem';
+import { getRooms } from 'api/rooms';
+import { useState } from 'react';
+import { useSlider } from 'hooks/useSlider';
 
-import styles from "./Rooms.module.scss";
+import styles from './Rooms.module.scss';
 
-import SliderDisplay from "components/SliderDisplay";
-import Slider from "react-slick";
+import SliderDisplay from 'components/SliderDisplay';
+import Slider from 'react-slick';
 
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
 
-import MediaQuery from "react-responsive";
+import MediaQuery from 'react-responsive';
 
 const { rooms, container, roomList, subtitle } = styles;
 
@@ -33,13 +33,14 @@ const Rooms = () => {
     slidesToScroll: 1,
     initialSlide: 0,
 
+    arrows: false,
+
     responsive: [
       {
         breakpoint: 768,
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
-          initialSlide: 0,
         },
       },
       {

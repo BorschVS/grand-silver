@@ -3,8 +3,9 @@
 .container {
   @extend %container;
   position: relative;
-
-  @media screen and (min-width: $tablet) {
+  display: flex;
+  align-items: baseline;
+  @include fromTablet {
     display: flex;
     justify-content: space-between;
   }
@@ -16,13 +17,13 @@
   margin-top: 32px;
   z-index: 1;
 
-  animation: fadeIn 800ms ease-in-out forwards;
+  animation: fadeIn 1000ms ease-in-out forwards;
 }
 
 .logo {
   overflow: visible;
 
-  @media screen and (max-width: calc($tablet - 1px)) {
+  @include fromTablet {
     display: inline-block;
     position: relative;
     z-index: 1;
@@ -31,7 +32,7 @@
 
 .button {
   @extend %primaryButton;
-  @media screen and (max-width: calc($tablet - 1px)) {
+  @include mobile {
     position: absolute;
     top: 0;
     right: 20px;
@@ -45,7 +46,7 @@
     cursor: pointer;
   }
 
-  @media screen and (min-width: $tablet) {
+  @include fromTablet {
     display: none;
   }
 
@@ -60,7 +61,8 @@
 
 .number {
   @extend %text;
-
+  margin: 0;
+  line-height: 0.5;
   display: flex;
   align-items: center;
 
@@ -71,7 +73,7 @@
   font-size: 20px;
   font-weight: 400;
 
-  @media screen and (max-width: calc($tablet - 1px)) {
+  @include mobile {
     display: none;
   }
 }

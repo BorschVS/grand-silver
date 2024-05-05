@@ -12,8 +12,7 @@ const Hero = () => {
             Тут зливаються комфорт, та бездоганне обслуговування.
           </p>
           <button type="button" className={button}>
-            <span className={shine}></span>
-            Бронювати
+            <span className={shine}>Бронювати</span>
           </button>
         </div>
       </div>

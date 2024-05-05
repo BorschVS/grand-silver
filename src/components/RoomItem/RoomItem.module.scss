@@ -3,7 +3,6 @@
 .roomItem {
   display: flex;
   flex-direction: column;
-  margin-right: 30px;
   width: 100%;
   @include desktop {
     max-width: calc((100% - 2 * 30px) / 3);

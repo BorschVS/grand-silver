@@ -29,18 +29,10 @@
 
 @keyframes shine {
   0% {
-    transform: translateX(-150%) rotateY(0);
+    transform: translateX(-100%) rotateY(0);
   }
   100% {
-    transform: translateX(500%) rotateY(90deg);
-  }
-}
-
-@keyframes slideInLeft {
-  from {
-    left: -100%;
-  }
-  to {
-    left: 0;
+    transform: translateX(400%) rotateY(90deg);
+    overflow: hidden;
   }
 }
