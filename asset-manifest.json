@@ -1,9 +1,9 @@
 {
   "files": {
-    "main.css": "/grand-silver/static/css/main.abcb0275.css",
-    "main.js": "/grand-silver/static/js/main.185ef7fb.js",
-    "static/css/818.1a66b5b2.chunk.css": "/grand-silver/static/css/818.1a66b5b2.chunk.css",
-    "static/js/818.99a0a409.chunk.js": "/grand-silver/static/js/818.99a0a409.chunk.js",
+    "main.css": "/grand-silver/static/css/main.cb41b8d1.css",
+    "main.js": "/grand-silver/static/js/main.439b2e6a.js",
+    "static/css/818.159f6b6e.chunk.css": "/grand-silver/static/css/818.159f6b6e.chunk.css",
+    "static/js/818.42886262.chunk.js": "/grand-silver/static/js/818.42886262.chunk.js",
     "static/js/599.21531f26.chunk.js": "/grand-silver/static/js/599.21531f26.chunk.js",
     "static/js/380.bdf8d6bb.chunk.js": "/grand-silver/static/js/380.bdf8d6bb.chunk.js",
     "static/js/377.cc84ec3a.chunk.js": "/grand-silver/static/js/377.cc84ec3a.chunk.js",
@@ -68,10 +68,10 @@
     "static/media/logo.svg": "/grand-silver/static/media/logo.2cf847a1fcb56d68887258ab8d534e61.svg",
     "static/media/left.svg": "/grand-silver/static/media/left.cdb215c165db88dcbf345a209f5a095f.svg",
     "static/media/right.svg": "/grand-silver/static/media/right.ad0eb483db3c1f9ab3d29e12a0aaec98.svg",
-    "main.abcb0275.css.map": "/grand-silver/static/css/main.abcb0275.css.map",
-    "main.185ef7fb.js.map": "/grand-silver/static/js/main.185ef7fb.js.map",
-    "818.1a66b5b2.chunk.css.map": "/grand-silver/static/css/818.1a66b5b2.chunk.css.map",
-    "818.99a0a409.chunk.js.map": "/grand-silver/static/js/818.99a0a409.chunk.js.map",
+    "main.cb41b8d1.css.map": "/grand-silver/static/css/main.cb41b8d1.css.map",
+    "main.439b2e6a.js.map": "/grand-silver/static/js/main.439b2e6a.js.map",
+    "818.159f6b6e.chunk.css.map": "/grand-silver/static/css/818.159f6b6e.chunk.css.map",
+    "818.42886262.chunk.js.map": "/grand-silver/static/js/818.42886262.chunk.js.map",
     "599.21531f26.chunk.js.map": "/grand-silver/static/js/599.21531f26.chunk.js.map",
     "380.bdf8d6bb.chunk.js.map": "/grand-silver/static/js/380.bdf8d6bb.chunk.js.map",
     "377.cc84ec3a.chunk.js.map": "/grand-silver/static/js/377.cc84ec3a.chunk.js.map",
@@ -80,7 +80,7 @@
     "13.0b34ce28.chunk.js.map": "/grand-silver/static/js/13.0b34ce28.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.abcb0275.css",
-    "static/js/main.185ef7fb.js"
+    "static/css/main.cb41b8d1.css",
+    "static/js/main.439b2e6a.js"
   ]
 }
