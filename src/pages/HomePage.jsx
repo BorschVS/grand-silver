@@ -1,8 +1,9 @@
-import About from "components/About";
-import Hero from "components/Hero";
-import Rooms from "components/Rooms";
-import Service from "components/Service";
-import { Helmet } from "react-helmet";
+import About from 'components/About';
+import Hero from 'components/Hero';
+import Reviews from 'components/Reviews/Reviews';
+import Rooms from 'components/Rooms';
+import Service from 'components/Service';
+import { Helmet } from 'react-helmet';
 
 const Home = () => {
   return (
@@ -13,8 +14,9 @@ const Home = () => {
 
       <Hero />
       <About />
-      <Rooms/>
+      <Rooms />
       <Service />
+      <Reviews />
     </main>
   );
 };

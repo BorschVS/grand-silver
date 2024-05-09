@@ -4,9 +4,9 @@
   @extend %container;
   position: relative;
   display: flex;
+  flex-shrink: 0.5;
   align-items: baseline;
   @include fromTablet {
-    display: flex;
     justify-content: space-between;
   }
 }
@@ -17,12 +17,11 @@
   margin-top: 32px;
   z-index: 1;
 
-  animation: fadeIn 1000ms ease-in-out forwards;
+  // animation: fadeIn 1000ms ease-in-out forwards;
 }
 
 .logo {
-  overflow: visible;
-
+  // overflow: visible;
   @include fromTablet {
     display: inline-block;
     position: relative;

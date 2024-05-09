@@ -25,7 +25,7 @@ const Rooms = () => {
     setRoomIndex
   );
 
-  var settings = {
+  const settings = {
     dots: false,
     infinite: true,
     speed: 500,

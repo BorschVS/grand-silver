@@ -1,12 +1,12 @@
-import { images } from "./gallery";
-import { nanoid } from "nanoid";
+import { images } from './gallery';
+import { nanoid } from 'nanoid';
 
 const services = [
   {
     id: nanoid(),
-    title: "Бари",
+    title: 'Бари',
     description:
-      "Бари спеціалізуються на продажу алкогольних напоїв, таких як вино, пиво, коктейлі та міцні напої. У барах можна замовити закуски та невеликі страви.",
+      'Бари спеціалізуються на продажу алкогольних напоїв, таких як вино, пиво, коктейлі та міцні напої. У барах можна замовити закуски та невеликі страви.',
     images: {
       mobile: {
         x1: images.mobile.services.bar.x1,
@@ -22,9 +22,9 @@ const services = [
   },
   {
     id: nanoid(),
-    title: "Басейн",
+    title: 'Басейн',
     description:
-      "Басейни на відкритому повітрі або закриті, вони зазвичай містять воду, що грівається до комфортної температури.",
+      'Басейни на відкритому повітрі або закриті, вони зазвичай містять воду, що грівається до комфортної температури.',
     images: {
       mobile: {
         x1: images.mobile.services.pool.x1,
@@ -40,9 +40,9 @@ const services = [
   },
   {
     id: nanoid(),
-    title: "Вечірки",
+    title: 'Вечірки',
     description:
-      "Свята включають програму, що складається з різноманітних активностей, виступів, виставок, демонстрацій.",
+      'Свята включають програму, що складається з різноманітних активностей, виступів, виставок, демонстрацій.',
     images: {
       mobile: {
         x1: images.mobile.services.party.x1,
@@ -62,10 +62,10 @@ export const getServices = () => {
   return services;
 };
 
-export const getServiceById = (id) => {
-  return services.find((service) => service.id === id);
+export const getServiceById = id => {
+  return services.find(service => service.id === id);
 };
 
-export const getServiceByTitle = (title) => {
-  return services.find((service) => service.title === title);
+export const getServiceByTitle = title => {
+  return services.find(service => service.title === title);
 };

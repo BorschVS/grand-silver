@@ -1,4 +1,4 @@
-@import "/src/styles/shared.scss";
+@import '/src/styles/shared.scss';
 
 .serviceItem {
   margin-bottom: 40px;
@@ -20,17 +20,20 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 30px;
-
-  flex-grow: 1;
 
   @include laptopAndDesktop {
     flex-basis: calc((55% - 30px * 2) * 2);
+    gap: 30px;
   }
 }
 
 .subtitle {
   @extend %subtitle;
+  font-weight: 400;
+  font-size: 30px;
+  margin: 12px 0 20px;
+  text-transform: capitalize;
+
   @include desktop {
     font-size: 52px;
     font-weight: 400;
@@ -40,7 +43,7 @@
 
 .text {
   @extend %text;
-  margin: 0;
+  margin: 0 0 20px;
   font-size: 18px;
   color: $medium-grey;
 }

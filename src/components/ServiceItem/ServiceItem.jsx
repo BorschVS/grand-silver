@@ -1,4 +1,4 @@
-import styles from "./ServiceItem.module.scss";
+import styles from './ServiceItem.module.scss';
 
 const { serviceItem, thumb, serviceBox, subtitle, serviceIndex, text, button } =
   styles;
@@ -34,7 +34,7 @@ const ServiceItem = ({ id, serviceNumber, title, description, images }) => {
         </h3>
         <p className={text}>{description}</p>
         <button className={button} type="button">
-          Бронювати
+          Детальніше
         </button>
       </div>
     </li>
