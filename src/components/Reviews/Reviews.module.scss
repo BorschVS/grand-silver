@@ -1,41 +1,9 @@
 @import 'src/styles/shared.scss';
 
-.reviewCard {
-  background-color: $primary-white;
-  padding: 22px 16px;
-}
-
 .container {
   @extend %container;
 }
 
-.thumb {
-  width: 60px;
-}
-
-.hiddenTitle {
-  @extend %visuallyHidden;
-}
-
-.authorContainer {
-  display: flex;
-  flex-direction: row;
-  gap: 8px;
-
-  margin-bottom: 20px;
-}
-
-.info {
-  align-self: center;
-}
-
-.age {
-  color: $medium-grey;
-  font-weight: 600;
-}
-
-.stars {
-  display: flex;
-  margin-bottom: 12px;
-  line-height: 1.2;
+.list {
+  @extend %list;
 }
