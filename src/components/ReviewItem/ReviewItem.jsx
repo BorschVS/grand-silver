@@ -33,7 +33,7 @@ const ReviewItem = ({ review }) => {
         <h3 className={hiddenTitle}>review</h3>
         <div className={authorContainer}>
           <div className={thumb}>
-            <img src={Avatar} />
+            <img src={Avatar} alt="Фото користувача" />
           </div>
           <div className={info}>
             <p className={name}>{author}</p>
