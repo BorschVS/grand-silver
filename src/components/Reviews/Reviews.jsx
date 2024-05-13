@@ -1,3 +1,6 @@
+import styles from './Reviews.module.scss';
+import 'swiper/scss';
+
 import { useRef, useState } from 'react';
 import { getReviews } from 'api/reviews';
 
@@ -7,9 +10,6 @@ import ReviewItem from 'components/ReviewItem/ReviewItem';
 
 import { Navigation } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
-
-import styles from './Reviews.module.scss';
-import 'swiper/scss';
 
 const { reviews, container, wrapper, subtitle, list } = styles;
 
