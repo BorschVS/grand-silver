@@ -5,7 +5,7 @@ import Rooms from 'components/Rooms';
 import Service from 'components/Service';
 import { Helmet } from 'react-helmet';
 
-const Home = () => {
+const HomePage = () => {
   return (
     <main>
       <Helmet>
@@ -21,4 +21,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default HomePage;

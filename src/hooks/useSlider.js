@@ -1,12 +1,15 @@
-export const useSlider = (index, data, setIndex) => {
+export const useSlider = (index, data, setIndex, swiperRef) => {
   const showPrevSlide = () => {
-    if (index === 0) return setIndex(data.length - 1);
+    if (index === 0) return;
+    swiperRef.current.swiper.slideTo(index - 1);
     setIndex(index - 1);
   };
 
   const showNextSlide = () => {
-    if (index === data.length - 1) return setIndex(0);
+    console.log(swiperRef);
 
+    if (index === data.length - 1) return;
+    swiperRef.current.swiper.slideTo(index + 1);
     setIndex(index + 1);
   };
 

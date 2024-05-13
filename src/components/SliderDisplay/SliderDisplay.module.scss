@@ -1,33 +1,57 @@
 @import 'src/styles/shared.scss';
 
 .slider {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-  
-    margin-top: 40px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 20px;
+
+  @include desktop {
+    flex-direction: column;
+    width: 16px;
+    margin-top: 0;
   }
-  
-  .leftArrow {
-      padding-right: 35px;
+}
+
+.slider .leftArrow,
+.slider .rightArrow {
+  @include desktop {
+    padding: 0;
   }
-  
-  .rightArrow {
-      padding-left: 35px;
+}
+
+.leftArrow {
+  padding-right: 35px;
+  @include desktop {
+    transform: rotateZ(90deg);
   }
-  
-  .line {
-    align-self: center;
-    margin: 0;
-    height: 1px;
-    width: 40px;
-    background-color: $primary-black;
-  
-    margin-left: 20px;
-    margin-right: 20px;
+}
+
+.rightArrow {
+  padding-left: 35px;
+  @include desktop {
+    transform: rotateZ(90deg);
   }
-  
-  .cardIndex {
-      font-size: 16px;
-      font-weight: 600;
+}
+
+.line {
+  align-self: center;
+  margin: 0;
+  height: 1px;
+  width: 40px;
+  background-color: $primary-black;
+
+  margin-left: 20px;
+  margin-right: 20px;
+
+  @include desktop {
+    width: 1px;
+    height: 40px;
   }
+}
+
+.cardIndex {
+  text-align: center;
+  font-size: 16px;
+  font-weight: 600;
+}

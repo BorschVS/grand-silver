@@ -3,38 +3,43 @@ import { nanoid } from 'nanoid';
 const reviews = [
   {
     id: nanoid(),
-    author: 'John Doe',
+    author: 'Іван Петров',
     rating: 5,
+    age: 20,
     comment:
-      'Great experience! The service was excellent and the staff was very friendly. I highly recommend this place.',
+      'Чудовий досвід! Обслуговування було відмінним, а персонал дуже дружелюбний. Я відразу рекомендую це місце.',
   },
   {
     id: nanoid(),
-    author: 'Jane Smith',
+    author: 'Олена Коваль',
     rating: 4,
+    age: 21,
     comment:
-      'I had a wonderful time here. The food was delicious and the atmosphere was cozy. Will definitely come back again.',
+      "Я чудово провела час тут. Їжа була смачною, а атмосфера - затишною. Обов'язково повернусь знову.",
   },
   {
     id: nanoid(),
-    author: 'Mike Johnson',
+    author: 'Михайло Іваненко',
     rating: 5,
+    age: 34,
     comment:
-      "Amazing service! The staff went above and beyond to make sure we had a fantastic experience. I can't wait to visit again.",
+      'Дивовижне обслуговування! Персонал пішов вище і далі, щоб переконатися, що ми мали фантастичний досвід. Я не можу дочекатися наступного візиту.',
   },
   {
     id: nanoid(),
-    author: 'Emily Brown',
+    author: 'Олена Сидоренко',
     rating: 3,
+    age: 46,
     comment:
-      'The food was decent, but the service was a bit slow. Overall, it was an okay experience.',
+      'Їжа була непоганою, але обслуговування трохи повільне. В цілому, це був нормальний досвід.',
   },
   {
     id: nanoid(),
-    author: 'David Wilson',
+    author: 'Давид Васильчук',
     rating: 5,
+    age: 26,
     comment:
-      'Absolutely loved it! The food was delicious and the ambiance was perfect. Would definitely recommend it to anyone.',
+      "Абсолютно в захваті! Їжа була смачною, а атмосфера - ідеальною. Обов'язково рекомендую це будь-кому.",
   },
 ];
 

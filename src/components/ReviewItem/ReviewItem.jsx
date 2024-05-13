@@ -1,26 +1,32 @@
 import styles from './ReviewItem.module.scss';
 
-import Avatar from 'img/reviews/avatar960.jpg';
+import Avatar from 'img/reviews/User-avatar.png';
 import { ReactComponent as IconStar } from 'img/icons/star.svg';
+import { useWordEnding } from 'hooks/useWordEnding';
 
 const {
   reviewItem,
   reviewCard,
   hiddenTitle,
   authorContainer,
+  reviewContainer,
   thumb,
   info,
   name,
-  age,
   text,
   stars,
 } = styles;
 
 const ReviewItem = ({ review }) => {
-  const { id, author, rating, comment } = review;
+  const { author, rating, age, comment } = review;
+
   const reviewRating = Array.from({ length: rating }, (_, index) => (
     <IconStar key={index} className={IconStar} />
   ));
+
+  const useEnding = useWordEnding();
+  const wordForms = ['рік', 'роки', 'років'];
+
   return (
     <li className={reviewItem}>
       <article className={reviewCard}>
@@ -31,11 +37,16 @@ const ReviewItem = ({ review }) => {
           </div>
           <div className={info}>
             <p className={name}>{author}</p>
-            <p className={age}>26 years</p>
+            <p className={styles.age}>{`${age} ${useEnding(
+              age,
+              wordForms
+            )}`}</p>
           </div>
         </div>
-        <div className={stars}>{reviewRating} </div>
-        <p className={text}>{comment}</p>
+        <div className={reviewContainer}>
+          <div className={stars}>{reviewRating}</div>
+          <p className={text}>{comment}</p>
+        </div>
       </article>
     </li>
   );

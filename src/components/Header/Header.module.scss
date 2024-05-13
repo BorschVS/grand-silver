@@ -50,9 +50,10 @@
   }
 
   &.isOpen {
-    position: absolute;
+    position: fixed;
+    top: 32px;
     right: 30px;
-    z-index: 2;
+    z-index: 999;
     background-color: transparent;
     border: none;
   }

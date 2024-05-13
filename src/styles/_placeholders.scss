@@ -43,7 +43,7 @@
   margin-bottom: 20px;
 
   @include tabletToLaptop {
-    font-size: 38px;
+    font-size: 20px;
     margin-bottom: 40px;
   }
 
@@ -77,7 +77,7 @@
   }
 
   @include tabletToLaptop {
-    font-size: 32px;
+    font-size: 24px;
 
     padding: 30px 60px;
   }

@@ -1,13 +1,16 @@
-import { Helmet } from "react-helmet";
+import { Helmet } from 'react-helmet';
 
-const Rooms = () => {
-    return (
-      <main>
-        <Helmet>
-          <title>Rooms</title>
-        </Helmet>
-      </main>
-    );
-  };
-  
-  export default Rooms;
+import Rooms from 'components/Rooms';
+
+const RoomsPage = () => {
+  return (
+    <main>
+      <Helmet>
+        <title>Rooms</title>
+      </Helmet>
+      <Rooms />
+    </main>
+  );
+};
+
+export default RoomsPage;

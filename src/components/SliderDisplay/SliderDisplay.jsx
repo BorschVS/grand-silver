@@ -2,8 +2,6 @@ import { ReactComponent as Prev } from 'img/icons/left.svg';
 import { ReactComponent as Next } from 'img/icons/right.svg';
 import styles from './SliderDisplay.module.scss';
 
-import 'swiper/scss/navigation';
-
 const { slider, leftArrow, rightArrow, cardIndex, line } = styles;
 
 const SliderDisplay = ({ total, current, prev, next }) => {

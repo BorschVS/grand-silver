@@ -1,9 +1,25 @@
 @import 'src/styles/shared.scss';
 
+.reviews {
+  margin-bottom: 60px;
+
+  @include desktop {
+    margin-bottom: 100px;
+  }
+}
+
+.subtitle {
+  @extend %subtitle;
+}
+
 .container {
   @extend %container;
 }
 
-.list {
-  @extend %list;
+.wrapper {
+  @include desktop {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+  }
 }

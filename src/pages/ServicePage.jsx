@@ -1,13 +1,15 @@
-import { Helmet } from "react-helmet";
+import Service from 'components/Service/Service';
+import { Helmet } from 'react-helmet';
 
-const Service = () => {
-    return (
-      <main>
-        <Helmet>
-          <title>Service</title>
-        </Helmet>
-      </main>
-    );
-  };
-  
-  export default Service;
+const ServicePage = () => {
+  return (
+    <main>
+      <Helmet>
+        <title>Service</title>
+      </Helmet>
+      <Service />
+    </main>
+  );
+};
+
+export default ServicePage;
