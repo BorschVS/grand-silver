@@ -1,5 +1,5 @@
 import styles from './Rooms.module.scss';
-import 'swiper/css';
+import 'swiper/scss';
 
 import RoomItem from 'components/RoomItem';
 import { getRooms } from 'api/rooms';

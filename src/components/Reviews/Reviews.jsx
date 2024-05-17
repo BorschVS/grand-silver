@@ -1,5 +1,5 @@
 import styles from './Reviews.module.scss';
-import 'swiper/css';
+import 'swiper/scss';
 
 import { useRef, useState } from 'react';
 import { getReviews } from 'api/reviews';
