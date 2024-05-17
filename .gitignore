@@ -8,6 +8,9 @@
 /node_modules
 /.pnp
 .pnp.js
+/dist
+.DS_Store
+
 
 # testing
 /coverage
