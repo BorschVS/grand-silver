@@ -1,3 +1,17 @@
+//Hero 
+
+// from mobile to laptop
+
+import hotel326 from 'img/login/hotel326.jpg';
+import hotel652 from 'img/login/hotel652.jpg';
+import hotel1304 from 'img/login/hotel1304.jpg';
+
+// desktop
+
+import hotel724 from 'img/login/hotel724.jpg';
+import hotel1448 from 'img/login/hotel1448.jpg';
+import hotel2896 from 'img/login/hotel2896.jpg';
+
 // About
 
 // mobile
@@ -68,6 +82,12 @@ import party1875 from 'img/services/party1875.jpg';
 
 export const images = Object.freeze({
   mobile: {
+    login: {
+      x1: hotel326,
+      x2: hotel652,
+      x3: hotel1304,
+    },
+
     about: {
       x1: pool320,
       x2: pool640,
@@ -114,7 +134,14 @@ export const images = Object.freeze({
       },
     },
   },
+
   desktop: {
+    login: {
+      x1: hotel724,
+      x2: hotel1448,
+      x3: hotel2896
+    },
+
     about: {
       x1: pool544,
       x2: pool1088,

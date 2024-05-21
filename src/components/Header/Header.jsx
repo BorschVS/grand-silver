@@ -8,7 +8,7 @@ import { ReactComponent as LogoIcon } from "img/icons/logo.svg";
 
 import { Link } from "react-router-dom";
 
-const {header, container, logo, iconClose, number} = styles;
+const {header, container, logo, iconClose, number, login} = styles;
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -33,6 +33,8 @@ const Header = () => {
         <a className={number} href="tel:+380000000000">
           +380-00-000-0000
         </a>
+
+        <Link className={login} to={'/login'}>Login</Link>
       </div>
     </header>
   );

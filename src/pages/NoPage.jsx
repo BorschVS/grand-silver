@@ -1,13 +1,18 @@
 import { Helmet } from "react-helmet";
 
+const centeredStyle = {
+  textAlign: 'center',
+  margin: '10px 0'
+}
+
 const NoPage = () => {
   return (
     <main>
       <Helmet>
         <title>Error</title>
       </Helmet>
-      <h1>Error</h1>
-      <p>Page not found</p>
+      <h1 style={centeredStyle}>Error</h1>
+      <p style={centeredStyle}>Page not found</p>
     </main>
   );
 };

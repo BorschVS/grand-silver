@@ -4,6 +4,7 @@
   "private": true,
   "homepage": "https://borschvs.github.io/grand-silver/",
   "dependencies": {
+    "@hookform/resolvers": "^3.4.0",
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
@@ -13,6 +14,7 @@
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-helmet": "^6.1.0",
+    "react-hook-form": "^7.51.4",
     "react-icons": "^5.2.0",
     "react-responsive": "^10.0.0",
     "react-router-dom": "^6.23.0",
@@ -21,15 +23,17 @@
     "sass": "^1.76.0",
     "slick-carousel": "^1.8.1",
     "swiper": "^11.1.1",
-    "web-vitals": "^2.1.4"
+    "web-vitals": "^2.1.4",
+    "yup": "^1.4.0"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject",
+    "start": "react-app-rewired start",
+    "build": "react-app-rewired build",
+    "test": "react-app-rewired test",
+    "eject": "react-app-rewired eject",
     "lint:js": "eslint src/**/*.{js,jsx}"
   },
+
   "eslintConfig": {
     "extends": [
       "react-app",
@@ -47,5 +51,10 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "customize-cra": "^1.0.0",
+    "mini-css-extract-plugin": "^2.9.0",
+    "react-app-rewired": "^2.2.1"
   }
 }
