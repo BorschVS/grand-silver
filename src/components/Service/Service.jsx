@@ -15,7 +15,7 @@ const Service = () => {
       <div className={container}>
         <h2 className={subtitle}>послуги</h2>
         <ul className={serviceList}>
-          {services.map(({ id, title, description, images }) => {
+          {services.map(({ id, title, description, images}) => {
             count++;
             return (
               <ServiceItem
