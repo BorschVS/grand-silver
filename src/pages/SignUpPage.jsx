@@ -1,7 +1,8 @@
 import Login from 'components/Login';
 import { Helmet } from 'react-helmet';
 
-const LoginPage = () => {
+
+const SignUpPage = () => {
   return (
     <main>
       <Helmet>
@@ -12,4 +13,4 @@ const LoginPage = () => {
   );
 };
 
-export default LoginPage;
+export default SignUpPage;

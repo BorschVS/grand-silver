@@ -1,4 +1,5 @@
 @import "./variables";
+@import './functions';
 
 @mixin mobile {
   @media screen and (max-width: 767px) {
@@ -52,4 +53,8 @@
 
 @mixin transition {
   transition: background-color $transition-default, color $transition-default;
+}
+
+@mixin conditionalStyles($condition, $property, $true-value, $false-value) {
+  #{$property}: chooseProperty($condition, $true-value, $false-value);
 }

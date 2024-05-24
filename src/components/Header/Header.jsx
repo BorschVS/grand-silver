@@ -1,14 +1,14 @@
-import styles from "./Header.module.scss";
-import { useState } from "react";
-import Menu from "components/Menu";
-import { IoMdClose } from "react-icons/io";
-import clsx from "clsx";
+import styles from './Header.module.scss';
+import { useState } from 'react';
+import Menu from 'components/Menu';
+import { IoMdClose } from 'react-icons/io';
+import clsx from 'clsx';
 
-import { ReactComponent as LogoIcon } from "img/icons/logo.svg";
+import { ReactComponent as LogoIcon } from 'img/icons/logo.svg';
 
-import { Link } from "react-router-dom";
+import { Link } from 'react-router-dom';
 
-const {header, container, logo, iconClose, number, login} = styles;
+const { header, container, logo, iconClose, number, login } = styles;
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -27,14 +27,12 @@ const Header = () => {
         </Link>
         <button className={buttonIsOpen} onClick={() => toggleMenu()}>
           {isOpen && <IoMdClose size={24} className={iconClose} />}
-          {!isOpen && "меню"}
+          {!isOpen && 'меню'}
         </button>
         <Menu isOpen={isOpen} toggleMenu={toggleMenu} />
-        <a className={number} href="tel:+380000000000">
-          +380-00-000-0000
-        </a>
-
-        <Link className={login} to={'/login'}>Login</Link>
+        <Link className={login} to={'/login'}>
+          Вхід / Реєстрація
+        </Link>
       </div>
     </header>
   );

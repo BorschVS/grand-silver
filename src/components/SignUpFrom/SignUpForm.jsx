@@ -3,7 +3,8 @@ import { Link } from 'react-router-dom';
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from 'yup';
 
-import styles from './LoginForm.module.scss';
+import styles from './SignUpForm.module.scss';
+
 import { IoMdCheckmark } from 'react-icons/io';
 import { useState } from 'react';
 
@@ -23,17 +24,35 @@ const {
   checkmark,
   link,
   socialContainer,
-  error
+  error,
 } = styles;
 
 const schema = yup
   .object({
     email: yup.string().required(),
-    password: yup.string().required("Обов'язкове поле"),
+    number: yup.number().required(),
+    password: yup
+      .string()
+      .min(8, 'Пароль повинен містити щонайменше 8 символів')
+      .matches(
+        /[a-z]/,
+        'Пароль повинен містити щонайменше одну маленьку літеру'
+      )
+      .matches(/[A-Z]/, 'Пароль повинен містити щонайменше одну велику літеру')
+      .matches(/[0-9]/, 'Пароль повинен містити щонайменше одну цифру')
+      .matches(
+        /[!@#$%^&*(),.?":{}|<>]/,
+        'Пароль повинен містити щонайменше один спеціальний символ'
+      )
+      .required("Обов'язкове поле"),
+    confirmPassword: yup
+      .string()
+      .oneOf([yup.ref('password'), null], 'Паролі повинні співпадати')
+      .required("Підтвердження паролю обов'язкове"),
   })
   .required();
 
-const LoginForm = () => {
+const SignUpForm = () => {
   const {
     register,
     handleSubmit,
@@ -46,10 +65,36 @@ const LoginForm = () => {
   return (
     <form className={form} onSubmit={handleSubmit(onSubmit)}>
       <label className={label}>
-        Пошта
+        Ім'я
         <input
           className={input}
           type="text"
+          {...register('name', { required: true, maxLength: 20 })}
+        />
+        <p className={error}>{errors.name?.message}</p>
+      </label>
+      <label className={label}>
+        Прізвище
+        <input
+          className={input}
+          type="text"
+          {...register('surname', { required: true, maxLength: 20 })}
+        />
+        <p className={error}>{errors.surname?.message}</p>
+      </label>
+      <label className={label}>
+        Телефон
+        <input
+          className={input}
+          type="text"
+          {...register('phone', { required: true, maxLength: 12 })}
+        />
+      </label>
+      <label className={label}>
+        Пошта
+        <input
+          className={input}
+          type="email"
           {...register('email', { required: true, maxLength: 20 })}
         />
         <p className={error}>{errors.email?.message}</p>
@@ -58,6 +103,15 @@ const LoginForm = () => {
         Пароль
         <input className={input} type="password" {...register('password')} />
         <p className={error}>{errors.password?.message}</p>
+      </label>
+      <label className={label}>
+        Повторіть пароль
+        <input
+          className={input}
+          type="password"
+          {...register('confirmPassword')}
+        />
+        <p className={error}>{errors.confirmPassword?.message}</p>
       </label>
 
       <div className={box}>
@@ -95,4 +149,4 @@ const LoginForm = () => {
   );
 };
 
-export default LoginForm;
+export default SignUpForm;

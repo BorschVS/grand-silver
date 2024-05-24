@@ -1,5 +1,5 @@
-import styles from "./Navigation.module.scss";
-import { Link } from "react-router-dom";
+import styles from './Navigation.module.scss';
+import { Link } from 'react-router-dom';
 
 const Navigation = ({ toggleMenu }) => {
   return (
@@ -11,18 +11,39 @@ const Navigation = ({ toggleMenu }) => {
           </Link>
         </li>
         <li className={styles.navItem}>
-          <Link className={styles.navLink} to="/about" onClick={() => toggleMenu()}>
+          <Link
+            className={styles.navLink}
+            to="/about"
+            onClick={() => toggleMenu()}
+          >
             Про нас
           </Link>
         </li>
         <li className={styles.navItem}>
-          <Link className={styles.navLink} to="/rooms" onClick={() => toggleMenu()}>
+          <Link
+            className={styles.navLink}
+            to="/rooms"
+            onClick={() => toggleMenu()}
+          >
             Номера
           </Link>
         </li>
         <li className={styles.navItem}>
-          <Link className={styles.navLink} to="/service" onClick={() => toggleMenu()}>
+          <Link
+            className={styles.navLink}
+            to="/service"
+            onClick={() => toggleMenu()}
+          >
             Послуги
+          </Link>
+        </li>
+        <li className={styles.navItem}>
+          <Link
+            className={styles.navLink}
+            to="/contacts"
+            onClick={() => toggleMenu()}
+          >
+            Контакти
           </Link>
         </li>
       </ul>

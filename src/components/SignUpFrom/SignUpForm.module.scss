@@ -1,14 +1,13 @@
 @import 'src/styles/shared.scss';
 
 .form {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  font-family: $font-primary;
-
-  @include laptopAndDesktop {
+  @include desktop {
     width: 360px;
+    display: flex;
+    flex-direction: column;
     margin-top: 32px;
+
+    font-family: $font-primary;
   }
 }
 
@@ -111,7 +110,7 @@
 }
 
 .error {
-  color: $error-red;
+    color: $error-red;
 }
 
 @keyframes checkmarkFade {
