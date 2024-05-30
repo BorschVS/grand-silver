@@ -1,27 +1,27 @@
 @import 'src/styles/shared.scss';
 
 .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: end;
-    border-bottom: 1px solid $dark-black;
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  border-bottom: 1px solid $dark-black;
 }
 
 .link {
-    @extend %link;
-    font-family: $font-primary;
-    text-transform: uppercase;
-    text-decoration: none;
-    font-size: 18px;
+  @extend %link;
+  font-family: $font-primary;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: 18px;
 }
 
 .link:nth-last-of-type(1) {
-    text-align: end;
+  text-align: end;
 }
 
 .active {
-    width: 50%;
-    border-bottom: 4px solid $dark-black;
-    font-size: 26px;
-    transition: font-size $transition-default, border $transition-default;
+  width: 50%;
+  border-bottom: 4px solid $dark-black;
+  font-size: 20px;
+  transition: font-size $transition-default, border $transition-default;
 }

@@ -42,7 +42,6 @@ const LoginForm = () => {
   const onSubmit = data => console.log(data);
 
   const [isChecked, setIsChecked] = useState(false);
-
   return (
     <form className={form} onSubmit={handleSubmit(onSubmit)}>
       <label className={label}>

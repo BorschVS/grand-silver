@@ -1,7 +1,7 @@
 import styles from './Picture.module.scss';
 
-const Picture = ({imgDesktop, imgMobile, alt, width}) => {
-    return <picture className={styles.thumb} style={{width: `${width}%`}}>
+const Picture = ({imgDesktop, imgMobile, alt, width, heigth}) => {
+    return <picture className={styles.thumb} style={{width: `${width}%`, heigth: `${heigth}px`}}>
     <source
       srcSet={`${imgDesktop.x1} 1x,
                 ${imgDesktop.x2} 2x,

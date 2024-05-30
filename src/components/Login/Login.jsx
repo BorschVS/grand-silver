@@ -10,16 +10,18 @@ import MediaQuery from 'react-responsive';
 
 const Login = () => {
   const location = useLocation().pathname;
+
   return (
     <div className={styles.container}>
       <MediaQuery minWidth={1024}>
         <Picture
           imgDesktop={images.desktop.login}
           imgMobile={images.mobile.login}
-          alt={'Готель "гранд сильвер"'}
-          width={60}
+          alt='Готель "гранд сильвер"'
+          width={60} // %
         />
       </MediaQuery>
+
       <div>
         <NavBar />
         {location === '/login' && <LoginForm />}

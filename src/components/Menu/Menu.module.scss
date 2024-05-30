@@ -16,7 +16,8 @@
 
 .menu {
   @extend %text;
-
+  margin: 0;
+  
   @include mobile {
     position: fixed;
     top: -32px;
@@ -57,4 +58,8 @@
   @include fromTablet {
     display: none;
   }
+}
+
+.button {
+  @extend %secondaryButton;
 }
