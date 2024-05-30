@@ -73,7 +73,7 @@ const SignUpForm = () => {
   return (
     <form className={form} onSubmit={handleSubmit(onSubmit)}>
       <label className={label}>
-        Ім'я
+        Ім&apos;я
         <input
           className={input}
           type="text"
@@ -136,7 +136,7 @@ const SignUpForm = () => {
           <span className={checkbox}>
             {isChecked && <IoMdCheckmark className={checkmark} />}
           </span>
-          Запам'ятати мене
+          Запам&apos;ятати мене
         </label>
         <Link to={'/changePassword'} className={link}>
           Забули пароль?

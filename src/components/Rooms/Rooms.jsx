@@ -1,20 +1,21 @@
-import styles from './Rooms.module.scss';
+import React, { useState, useRef } from "react";
 
 import RoomItem from 'components/RoomItem';
+
 import { getRooms } from 'api/rooms';
-import { useState, useRef } from 'react';
 import { useSlider } from 'hooks/useSlider';
 
 import SliderDisplay from 'components/SliderDisplay';
-
 import MediaQuery from 'react-responsive';
 
 //Swiper
 import { Navigation } from 'swiper/modules';
-import { Swiper, SwiperSlide } from 'swiper/swiper-react.mjs';
+import { Swiper, SwiperSlide } from 'swiper/react';
 
-import 'swiper/swiper.scss';
-// import 'swiper/modules/navigation.scss';
+import 'swiper/scss';
+import 'swiper/scss/navigation';
+
+import styles from './Rooms.module.scss';
 
 const { rooms, container, roomList, subtitle } = styles;
 

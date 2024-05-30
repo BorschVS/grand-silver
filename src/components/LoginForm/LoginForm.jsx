@@ -72,7 +72,7 @@ const LoginForm = () => {
           <span className={checkbox}>
             {isChecked && <IoMdCheckmark className={checkmark} />}
           </span>
-          Запам'ятати мене
+          Запам&apos;ятати мене
         </label>
         <Link to={'/changePassword'} className={link}>
           Забули пароль?

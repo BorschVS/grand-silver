@@ -12,6 +12,7 @@ const NavBar = () => {
     } else if (location === '/signup') {
       setIsActive({ login: false, signup: true });
     }
+    // eslint-disable-next-line
   }, []);
 
   const isActiveClassName = isActive => {

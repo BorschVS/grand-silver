@@ -4,12 +4,12 @@
   "private": true,
   "homepage": "https://borschvs.github.io/grand-silver/",
   "dependencies": {
+    "@babel/preset-react": "^7.24.6",
     "@hookform/resolvers": "^3.4.0",
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
     "clsx": "^2.1.1",
-    "eslint": "^8.57.0",
     "nanoid": "^5.0.7",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
@@ -21,7 +21,7 @@
     "react-scripts": "5.0.1",
     "react-spinners": "^0.13.8",
     "sass": "^1.76.0",
-    "swiper": "^11.1.1",
+    "swiper": "^11.1.4",
     "web-vitals": "^2.1.4",
     "yup": "^1.4.0"
   },
@@ -52,6 +52,11 @@
   },
   "devDependencies": {
     "customize-cra": "^1.0.0",
+    "eslint": "^8.57.0",
+    "eslint-plugin-import": "^2.29.1",
+    "eslint-plugin-jsx-a11y": "^6.8.0",
+    "eslint-plugin-react": "^7.34.2",
+    "eslint-plugin-react-hooks": "^4.6.2",
     "mini-css-extract-plugin": "^2.9.0",
     "react-app-rewired": "^2.2.1"
   }
