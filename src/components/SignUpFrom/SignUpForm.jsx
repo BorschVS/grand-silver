@@ -29,8 +29,16 @@ const {
 
 const schema = yup
   .object({
-    email: yup.string().required(),
-    number: yup.number().required(),
+    name: yup.string().required("Ім'я обов'язкове для заповнення"),
+    surname: yup.string().required("Прізвище обов'язкове для заповнення"),
+    phone: yup
+      .number()
+      .typeError('Телефон повинен бути числом')
+      .required("Телефон обов'язковий для заповнення"),
+    email: yup
+      .string()
+      .email('Введіть коректний email')
+      .required("Email обов'язковий для заповнення"),
     password: yup
       .string()
       .min(8, 'Пароль повинен містити щонайменше 8 символів')
@@ -89,6 +97,7 @@ const SignUpForm = () => {
           type="text"
           {...register('phone', { required: true, maxLength: 12 })}
         />
+        <p className={error}>{errors.phone?.message}</p>
       </label>
       <label className={label}>
         Пошта

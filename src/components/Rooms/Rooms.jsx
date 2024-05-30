@@ -1,5 +1,4 @@
 import styles from './Rooms.module.scss';
-import 'swiper/scss';
 
 import RoomItem from 'components/RoomItem';
 import { getRooms } from 'api/rooms';
@@ -9,8 +8,13 @@ import { useSlider } from 'hooks/useSlider';
 import SliderDisplay from 'components/SliderDisplay';
 
 import MediaQuery from 'react-responsive';
-import { Swiper, SwiperSlide } from 'swiper/react';
+
+//Swiper
 import { Navigation } from 'swiper/modules';
+import { Swiper, SwiperSlide } from 'swiper/swiper-react.mjs';
+
+import 'swiper/swiper.scss';
+// import 'swiper/modules/navigation.scss';
 
 const { rooms, container, roomList, subtitle } = styles;
 

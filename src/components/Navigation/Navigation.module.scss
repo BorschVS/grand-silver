@@ -1,4 +1,4 @@
-@import "/src/styles/shared.scss";
+@import '/src/styles/shared.scss';
 
 .nav {
   display: flex;
@@ -10,6 +10,7 @@
   @extend %list;
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 40px;
 
   @media screen and (min-width: $tablet) {
@@ -19,11 +20,11 @@
 }
 
 .navLink {
+  @extend %text;
   text-decoration: none;
   color: $primary-white;
   font-weight: 400;
   font-size: 38px;
-
 
   @media screen and (min-width: $tablet) {
     color: $primary-black;

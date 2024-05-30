@@ -19,12 +19,12 @@
   left: 0;
   width: 100%;
   min-height: 600px;
-  background-color: $primary-grey;
+  background-color: #a8c1ee;
   background-image: url(../../img/hero/hero720.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
-  // animation: slideToTop 400ms ease-in-out forwards;
+  animation: slideToTop 400ms ease-in-out forwards;
 
   @include retina {
     background-image: url(../../img/hero/hero1080.jpg);

@@ -1,13 +1,16 @@
 @import '/src/styles/shared.scss';
 
+.scroll {
+  overflow: hidden;
+}
+
 .container {
-  @extend %container;
   position: relative;
   display: flex;
+  justify-content: space-between;
   align-items: center;
-  @include fromTablet {
-    justify-content: space-between;
-  }
+
+  margin: 0 20px;
 }
 
 .header {
@@ -29,11 +32,18 @@
 
 .button {
   @extend %primaryButton;
+
+  &.isOpen {
+    position: fixed;
+    top: 32px;
+    right: 30px;
+    background-color: transparent;
+    border: none;
+  }
+
   @include mobile {
     position: absolute;
-    top: 0;
-    right: 20px;
-
+    right: 0;
     margin: 0;
     padding: 6px 16px;
     z-index: 1;
@@ -46,18 +56,10 @@
   @include fromTablet {
     display: none;
   }
-
-  &.isOpen {
-    position: fixed;
-    top: 32px;
-    right: 30px;
-    z-index: 999;
-    background-color: transparent;
-    border: none;
-  }
 }
 
-.number, .login {
+.number,
+.login {
   @extend %text;
   margin: 0;
   line-height: 0.5;
