@@ -1,17 +1,16 @@
-const Modal = ({ isOpen, onClose, children }) => {
+const Modal = ({ isOpen, onClose }) => {
   if (!isOpen) {
     return null;
   }
 
-  return ReactDOM.createPortal(
+  return (
     <div className="modal">
       <div className="modal-content">
         <button className="modal-close" onClick={onClose}>
-            x
+          x
         </button>
       </div>
-    </div>,
-    document.getElementById('modal-root')
+    </div>
   );
 };
 
