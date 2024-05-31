@@ -22,7 +22,7 @@ const Login = () => {
         />
       </MediaQuery>
 
-      <div>
+      <div className={styles.navBox}>
         <NavBar />
         {location === '/login' && <LoginForm />}
         {location === '/signup' && <SignUpForm />}

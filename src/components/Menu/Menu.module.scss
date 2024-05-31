@@ -3,7 +3,7 @@
 .box {
   display: flex;
   justify-content: space-between;
-  margin: 32px 20px 40px;
+  margin: 32px 40px 40px;
 
   margin-top: 32px;
 }
@@ -40,18 +40,31 @@
 
   @include mobile {
     position: fixed;
-    inset: 0;
+    width: 100%;
+    top: -100%;
+    left: 0;
+    bottom: 0;
+
     height: 100vh;
 
-    display: none;
+    overflow: hidden;
+    visibility: hidden;
+    opacity: 0;
 
     &.isOpen {
+      overflow: visible;
+      visibility: visible;
+      opacity: 1;
+
+      top: 0;
       position: fixed;
       display: flex;
       flex-direction: column;
       justify-content: start;
       z-index: 1;
       background-color: $dark-black;
+
+      transition: top $transition-default, opacity $transition-default, overflow $transition-default, visibility $transition-default;
     }
   }
 

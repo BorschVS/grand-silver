@@ -3,7 +3,7 @@ import { Helmet } from 'react-helmet';
 
 const ServicePage = () => {
   return (
-    <main>
+    <main style={{margin: '30px 0'}}>
       <Helmet>
         <title>Service</title>
       </Helmet>

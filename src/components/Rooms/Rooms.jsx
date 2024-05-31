@@ -1,4 +1,4 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useRef } from 'react';
 
 import RoomItem from 'components/RoomItem';
 
@@ -13,7 +13,6 @@ import { Navigation } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
 import 'swiper/scss';
-import 'swiper/scss/navigation';
 
 import styles from './Rooms.module.scss';
 
@@ -54,6 +53,7 @@ const Rooms = () => {
               return (
                 <SwiperSlide key={id}>
                   <RoomItem
+                    id={id}
                     title={title}
                     description={description}
                     images={images}

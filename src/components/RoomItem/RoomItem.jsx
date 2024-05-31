@@ -29,7 +29,9 @@ const RoomItem = ({ id, title, description, images, translate }) => {
           <h3 className={subtitle}>{title}</h3>
           <p className={text}>{description}</p>
           <button className={button} type="button">
+            {/* <Link path={`/${path}`}> */}
             Детальніше
+            {/* </Link> */}
           </button>
         </div>
       </article>

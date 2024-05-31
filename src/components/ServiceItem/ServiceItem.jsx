@@ -7,7 +7,7 @@ const { serviceItem, serviceBox, subtitle, serviceIndex, text, button } =
 const ServiceItem = ({ id, serviceNumber, title, description, images}) => {
   return (
     <li key={id} className={serviceItem}>
-      <Picture imgDesktop={images.desktop} imgMobile={images.mobile}/>
+      <Picture imgDesktop={images.desktop} imgMobile={images.mobile} alt={title}/>
       <div className={serviceBox}>
         <h3 className={subtitle}>
           <span className={serviceIndex}>0{serviceNumber}</span>

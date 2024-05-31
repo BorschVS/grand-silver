@@ -39,6 +39,6 @@ export const getRooms = () => {
   return rooms;
 };
 
-export const getRoom = (id) => {
+export const getRoomById = (id) => {
   return rooms.find((room) => room.id === id);
 };

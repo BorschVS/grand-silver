@@ -4,7 +4,7 @@ import Rooms from 'components/Rooms';
 
 const RoomsPage = () => {
   return (
-    <main>
+    <main style={{margin: '30px 0'}}>
       <Helmet>
         <title>Rooms</title>
       </Helmet>

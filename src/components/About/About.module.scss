@@ -57,6 +57,11 @@
 
 .thumb {
   width: 100%;
+
+  @include mobile {
+    margin-bottom: 20px;
+  }
+  
   @include desktop {
     width: 540px;
   }

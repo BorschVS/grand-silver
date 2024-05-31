@@ -4,6 +4,22 @@
   overflow: hidden;
 }
 
+.header {
+  @extend %container;
+
+  position: relative;
+  min-height: 30px;
+  margin-top: 32px;
+  z-index: 1;
+
+  @include mobile {
+    max-width: $tablet;
+  }
+  @include tablet {
+    max-width: $desktop;
+  }
+}
+
 .container {
   position: relative;
   display: flex;
@@ -11,15 +27,6 @@
   align-items: center;
 
   margin: 0 20px;
-}
-
-.header {
-  position: relative;
-  min-height: 30px;
-  margin-top: 32px;
-  z-index: 1;
-
-  animation: fadeIn 1000ms ease-in forwards;
 }
 
 .logo {

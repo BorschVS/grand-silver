@@ -4,6 +4,8 @@
   display: flex;
   justify-content: center;
   align-content: center;
+  transition: opacity $transition-default;
+  overflow: hidden;
 }
 
 .navList {
@@ -29,5 +31,14 @@
   @media screen and (min-width: $tablet) {
     color: $primary-black;
     font-size: 20px;
+  }
+}
+
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }

@@ -6,10 +6,13 @@ import clsx from 'clsx';
 import { Link } from 'react-router-dom';
 import { IoMdClose } from 'react-icons/io';
 import { ReactComponent as LogoIcon } from 'img/icons/logo.svg';
+import MediaQuery from 'react-responsive';
 
 const Menu = ({ isOpen, toggleMenu }) => {
-  const menuIsOpen = clsx(styles.menu, isOpen && styles.isOpen);
+  let menuIsOpen = clsx(styles.menu, isOpen && styles.isOpen);
+
   return ReactDOM.createPortal(
+    <MediaQuery maxWidth={768}>
     <div className={menuIsOpen} role="navigation">
       <div className={styles.box}>
         <Link to="/">
@@ -27,7 +30,8 @@ const Menu = ({ isOpen, toggleMenu }) => {
       <a className={styles.number} href="tel:+380000000000">
         +380-00-000-0000
       </a>
-    </div>,
+    </div>
+    </MediaQuery>,
     document.getElementById('menu-root')
   );
 };
