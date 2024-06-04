@@ -1,2 +1,0 @@
-"use strict";(self.webpackChunkgrand_silver=self.webpackChunkgrand_silver||[]).push([[501],{1501:(r,e,s)=>{s.r(e),s.d(e,{default:()=>d});var n=s(1591),l=s(579);const d=()=>(0,l.jsxs)("main",{children:[(0,l.jsx)(n.m,{children:(0,l.jsx)("title",{children:"Error"})}),(0,l.jsx)("h1",{children:"Error"}),(0,l.jsx)("p",{children:"Page not found"})]})}}]);
-//# sourceMappingURL=501.0e2f55e4.chunk.js.map
