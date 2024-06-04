@@ -1,4 +1,4 @@
-import Picture from 'components/Picture';
+import Picture from '@components/Picture';
 import styles from './ServiceItem.module.scss';
 
 const { serviceItem, serviceBox, subtitle, serviceIndex, text, button } =

@@ -1,6 +1,5 @@
+import Rooms from '@components/Rooms';
 import { Helmet } from 'react-helmet';
-
-import Rooms from 'components/Rooms';
 
 const RoomsPage = () => {
   return (

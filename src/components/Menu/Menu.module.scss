@@ -52,7 +52,7 @@
     opacity: 0;
 
     &.isOpen {
-      overflow: visible;
+      overflow: auto;
       visibility: visible;
       opacity: 1;
 
@@ -97,14 +97,15 @@
 
   color: $primary-white;
   align-self: center;
-  border: 1px solid $primary-white;
-
-  transition: color $transition-default, background-color $transition-default;
+  border-bottom: 1px solid $primary-white;
+  border-right:  1px solid $primary-white;
 
   &:hover,
   &:active,
   &:focus {
-    background-color: $primary-white;
-    color: $primary-black;
+    border-bottom: none;
+    border-right: none;
+    border-top: 1px solid $primary-white;
+    border-left:  1px solid $primary-white;
   }
 }

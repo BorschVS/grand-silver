@@ -1,11 +1,11 @@
 import styles from './Login.module.scss';
 
-import LoginForm from 'components/LoginForm';
-import Picture from 'components/Picture';
-import { images } from 'api/gallery';
-import NavBar from 'components/NavBar';
+import LoginForm from '@components/LoginForm';
+import Picture from '@components/Picture';
+import { images } from '@api/gallery';
+import NavBar from '@components/NavBar';
 import { useLocation } from 'react-router-dom';
-import SignUpForm from 'components/SignUpFrom/SignUpForm';
+import SignUpForm from '@components/SignUpFrom';
 import MediaQuery from 'react-responsive';
 
 const Login = () => {

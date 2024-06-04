@@ -1,11 +1,11 @@
 import React, { useState, useRef } from 'react';
 
-import RoomItem from 'components/RoomItem';
+import RoomItem from '@components/RoomItem';
 
-import { getRooms } from 'api/rooms';
-import { useSlider } from 'hooks/useSlider';
+import { getRooms } from '@api/rooms';
+import { useSlider } from '@hooks/useSlider';
 
-import SliderDisplay from 'components/SliderDisplay';
+import SliderDisplay from '@components/SliderDisplay';
 import MediaQuery from 'react-responsive';
 
 //Swiper

@@ -1,9 +1,9 @@
-import Header from "components/Header";
+import Header from "../Header";
 import styles from "./Layout.module.scss";
 import { Suspense } from "react";
 import { Outlet } from "react-router-dom";
 import { ClipLoader } from "react-spinners";
-import Footer from "components/Footer";
+import Footer from "../Footer";
 
 const Layout = () => {
   return (

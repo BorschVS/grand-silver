@@ -1,53 +1,124 @@
 import styles from "./Footer.module.scss";
 
 import { Link } from "react-router-dom";
-import { ReactComponent as YoutubeIcon } from "img/icons/youtube.svg";
-import { ReactComponent as PinterestIcon } from "img/icons/pinterest.svg";
-import { ReactComponent as TelegramIcon } from "img/icons/telegram.svg";
-import { ReactComponent as LogoIcon } from "img/icons/logo.svg";
+import YoutubeIcon from "@img/icons/youtube.svg?react";
+import PinterestIcon from "@img/icons/pinterest.svg?react";
+import TelegramIcon from "@img/icons/telegram.svg?react";
+import LogoIcon from "@img/icons/logo.svg?react";
+import MediaQuery from "react-responsive";
+
+const {
+  container,
+  footer,
+  navList,
+  navItem,
+  navLink,
+  socialContainer,
+  socialList,
+  socialItem,
+  socialIcon,
+  logoLink,
+  logoIcon,
+  number,
+  desktop, box,
+} = styles;
 
 const Footer = () => {
   return (
-    <footer className={styles.footer}>
-      <ul className={styles.navList}>
-        <li className={styles.navItem}>
-          <Link className={styles.navLink} to="/">
-            Головна
+    <div className={container}>
+      <footer className={footer}>
+        <MediaQuery maxWidth={1023}>
+          <ul className={navList}>
+            <li className={navItem}>
+              <Link className={navLink} to="/">
+                Головна
+              </Link>
+            </li>
+            <li className={navItem}>
+              <Link className={navLink} to="/about">
+                Про нас
+              </Link>
+            </li>
+            <li className={navItem}>
+              <Link className={navLink} to="/rooms">
+                Номера
+              </Link>
+            </li>
+            <li className={navItem}>
+              <Link className={navLink} to="/service">
+                Послуги
+              </Link>
+            </li>
+          </ul>
+
+          <div className={socialContainer}>
+            <ul className={socialList}>
+              <li className={socialItem}>
+                <YoutubeIcon className={socialIcon} />
+              </li>
+              <li className={socialItem}>
+                <PinterestIcon className={socialIcon} />
+              </li>
+              <li className={socialItem}>
+                <TelegramIcon className={socialIcon} />
+              </li>
+            </ul>
+          </div>
+          <Link to="/" className={logoLink}>
+            <LogoIcon className={logoIcon} />
           </Link>
-        </li>
-        <li className={styles.navItem}>
-          <Link className={styles.navLink} to="/about">
-            Про нас
-          </Link>
-        </li>
-        <li className={styles.navItem}>
-          <Link className={styles.navLink} to="/rooms">
-            Номера
-          </Link>
-        </li>
-        <li className={styles.navItem}>
-          <Link className={styles.navLink} to="/service">
-            Послуги
-          </Link>
-        </li>
-      </ul>
-      <div className={styles.socialContainer}>
-        <ul className={styles.socialList}>
-          <li className={styles.socialItem}>
-            <YoutubeIcon className={styles.socialIcon} />
-          </li>
-          <li className={styles.socialItem}>
-            <PinterestIcon className={styles.socialIcon} />
-          </li>
-          <li className={styles.socialItem}>
-            <TelegramIcon className={styles.socialIcon} />
-          </li>
-        </ul>
-        <Link to="/" className={styles.logoLink}>
-          <LogoIcon className={styles.logoIcon} />
-        </Link>
-      </div>
-    </footer>
+        </MediaQuery>
+
+        <MediaQuery minWidth={1024}>
+          <div className={desktop}>
+            <div className={box}>
+              <Link to="/" className={logoLink}>
+                <LogoIcon className={logoIcon} />
+              </Link>
+              <ul className={navList}>
+                <li className={navItem}>
+                  <Link className={navLink} to="/">
+                    Головна
+                  </Link>
+                </li>
+                <li className={navItem}>
+                  <Link className={navLink} to="/about">
+                    Про нас
+                  </Link>
+                </li>
+                <li className={navItem}>
+                  <Link className={navLink} to="/rooms">
+                    Номера
+                  </Link>
+                </li>
+                <li className={navItem}>
+                  <Link className={navLink} to="/service">
+                    Послуги
+                  </Link>
+                </li>
+              </ul>
+
+              <a className={number} href="tel:+38000000000">
+                +380-00-000-0000
+              </a>
+            </div>
+            <div className={socialContainer}>
+              <ul className={socialList}>
+                <li className={socialItem}>
+                  <YoutubeIcon className={socialIcon} />
+                </li>
+                <li className={socialItem}>
+                  <PinterestIcon className={socialIcon} />
+                </li>
+                <li className={socialItem}>
+                  <TelegramIcon className={socialIcon} />
+                </li>
+              </ul>
+            </div>
+          </div>
+        </MediaQuery>
+      </footer>
+    </div>
   );
 };
 

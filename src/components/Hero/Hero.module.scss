@@ -20,49 +20,49 @@
   width: 100%;
   min-height: 600px;
   background-color: #a8c1ee;
-  background-image: url(../../img/hero/hero720.jpg);
+  background-image: url(@img/hero/hero720.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
   // animation: slideToTop 400ms ease-in-out forwards;
 
   @include retina {
-    background-image: url(../../img/hero/hero1080.jpg);
+    background-image: url(@img/hero/hero1080.jpg);
   }
 
   @include tablet {
-    background-image: url(../../img/hero/hero1488.jpg);
+    background-image: url(@img/hero/hero1488.jpg);
     min-height: 1140px;
   }
 
   @include tablet {
     @include retina {
-      background-image: url(../../img/hero/hero2232.jpg);
+      background-image: url(@img/hero/hero2232.jpg);
     }
   }
 
   @include laptop {
-    background-image: url(../../img/hero/hero2880.jpg);
+    background-image: url(@img/hero/hero2880.jpg);
     background-position: bottom center;
     min-height: 1080px;
   }
 
   @include laptop {
     @include retina {
-      background-image: url(../../img/hero/hero4320.jpg);
+      background-image: url(@img/hero/hero4320.jpg);
       background-position: bottom center;
     }
   }
 
   @include desktop {
-    background-image: url(../../img/hero/hero2880.jpg);
+    background-image: url(@img/hero/hero2880.jpg);
     background-position: bottom center;
     min-height: 1170px;
   }
 
   @include desktop {
     @include retina {
-      background-image: url(../../img/hero/hero4320.jpg);
+      background-image: url(@img/hero/hero4320.jpg);
     }
   }
 }
@@ -90,7 +90,6 @@
   margin: 0 0 12px;
   text-align: center;
 
-  // animation: slideToBot 800ms ease-in-out forwards;
 
   @include desktop {
     margin-bottom: 50px;
@@ -110,8 +109,6 @@
 
   position: relative;
   z-index: 1;
-
-  // animation: fadeIn 500ms ease-in-out forwards;
 
   @include tablet {
     max-width: 80%;
@@ -141,40 +138,8 @@
   @extend %primaryButton;
   padding: 15px 30px;
 
-  // position: relative;
-
-  // overflow: hidden;
-
   @include desktop {
     font-size: 30px;
   }
 }
 
-// .shine {
-//   &::before {
-//     content: '';
-//     position: absolute;
-//     top: -90%;
-//     left: -100%;
-//     width: 50%;
-//     height: 200%;
-//     background: rgba(214, 214, 214, 0.3);
-//     border-radius: 10%;
-//     transition: transform 0.8s ease;
-//     z-index: 2;
-//     animation: shine 1s linear forwards;
-//   }
-
-//   &::after {
-//     content: '';
-//     position: absolute;
-//     top: 0;
-//     left: 0;
-//     width: 100%;
-//     height: 100%;
-//     overflow: hidden;
-
-//     transition: transform 0.8s ease;
-//     z-index: 1;
-//   }
-// }

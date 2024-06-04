@@ -1,1 +1,72 @@
-@import 'src/styles/shared.scss';
+@import "src/styles/shared.scss";
+
+.container {
+  @extend %container;
+}
+
+.flexbox {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  @include laptopAndDesktop {
+    flex-direction: row;
+  }
+}
+
+.contacts {
+  @extend %text;
+  width: 100%;
+  max-width: 600px;
+}
+
+.contacts > .text {
+  margin-bottom: 20px;
+}
+
+.address {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.number,
+.mail {
+  @extend %link;
+  text-decoration: underline;
+
+  transition: color $transition-default;
+  &:hover,
+  &:active,
+  &:focus {
+    color: $dark-grey;
+  }
+}
+
+.mapbox {
+  @include mobileAndTablet {
+    margin-bottom: 20px;
+  }
+
+  width: 100%;
+  height: 400px;
+  @include laptopAndDesktop {
+    width: 40vw;
+    height: 40vw;
+  }
+}
+
+.title {
+    @extend %subtitle;
+    @include mobileAndTablet {
+      margin-bottom: 30px;
+    }
+  }
+  
+  .text {
+    @include laptopAndDesktop {
+      max-width: 500px;
+    }
+  }

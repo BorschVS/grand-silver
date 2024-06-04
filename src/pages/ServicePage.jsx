@@ -1,4 +1,4 @@
-import Service from 'components/Service/Service';
+import Service from '@components/Service';
 import { Helmet } from 'react-helmet';
 
 const ServicePage = () => {

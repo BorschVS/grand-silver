@@ -1,8 +1,8 @@
-import styles from './ReviewItem.module.scss';
+import styles from "./ReviewItem.module.scss";
 
-import Avatar from 'img/reviews/User-avatar.png';
-import { ReactComponent as IconStar } from 'img/icons/star.svg';
-import { useWordEnding } from 'hooks/useWordEnding';
+import Avatar from "@img/reviews/user-avatar.png";
+import IconStar from "@img/icons/star.svg?react";
+import { useWordEnding } from "@hooks/useWordEnding";
 
 const {
   reviewItem,
@@ -15,17 +15,20 @@ const {
   name,
   text,
   stars,
+  starIcon
 } = styles;
 
 const ReviewItem = ({ review }) => {
   const { author, rating, age, comment } = review;
 
   const reviewRating = Array.from({ length: rating }, (_, index) => (
-    <IconStar key={index} className={IconStar} />
+    <span key={index} className={starIcon}>
+      <IconStar />
+    </span>
   ));
 
   const useEnding = useWordEnding();
-  const wordForms = ['рік', 'роки', 'років'];
+  const wordForms = ["рік", "роки", "років"];
 
   return (
     <li className={reviewItem}>

@@ -1,11 +1,11 @@
 import React, { useRef, useState } from 'react';
 
-import ReviewItem from 'components/ReviewItem/ReviewItem';
+import ReviewItem from '@components/ReviewItem';
 
-import { getReviews } from 'api/reviews';
+import { getReviews } from '@api/reviews';
 
-import { useSlider } from 'hooks/useSlider';
-import SliderDisplay from 'components/SliderDisplay/SliderDisplay';
+import { useSlider } from '@hooks/useSlider';
+import SliderDisplay from '@components/SliderDisplay';
 
 // Swiper
 import { Swiper, SwiperSlide } from 'swiper/react';

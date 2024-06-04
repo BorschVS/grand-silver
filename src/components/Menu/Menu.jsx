@@ -1,11 +1,11 @@
 import ReactDOM from 'react-dom';
 
-import Navigation from 'components/Navigation';
+import Navigation from '@components/Navigation';
 import styles from './Menu.module.scss';
 import clsx from 'clsx';
 import { Link } from 'react-router-dom';
-import { IoMdClose } from 'react-icons/io';
-import { ReactComponent as LogoIcon } from 'img/icons/logo.svg';
+import { IoMdClose } from 'react-icons/io?react';
+import LogoIcon from '@img/icons/logo.svg?react';
 import MediaQuery from 'react-responsive';
 
 const Menu = ({ isOpen, toggleMenu }) => {
@@ -21,7 +21,9 @@ const Menu = ({ isOpen, toggleMenu }) => {
         <Link to="/login" className={styles.link} onClick={() => toggleMenu()}>Вхід</Link>
         {isOpen && (
           <button className={styles.button} onClick={() => toggleMenu()}>
-            <IoMdClose size={24} className={styles.iconClose} />
+            <span className={styles.iconClose}>
+            <IoMdClose size={24}/>
+            </span>
           </button>
         )}
       </div>

@@ -1,6 +1,6 @@
 import styles from './SliderDisplay.module.scss';
-import { ReactComponent as Prev } from 'img/icons/left.svg';
-import { ReactComponent as Next } from 'img/icons/right.svg';
+import Prev from '@img/icons/left.svg?react';
+import Next from '@img/icons/right.svg?react';
 
 const { slider, leftArrow, rightArrow, cardIndex, line } = styles;
 

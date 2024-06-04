@@ -1,5 +1,5 @@
-import { getServices } from "api/services";
-import ServiceItem from "components/ServiceItem";
+import { getServices } from "@api/services";
+import ServiceItem from "../ServiceItem";
 
 import styles from "./Service.module.scss";
 

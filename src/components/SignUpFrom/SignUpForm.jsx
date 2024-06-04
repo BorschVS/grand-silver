@@ -8,8 +8,8 @@ import styles from './SignUpForm.module.scss';
 import { IoMdCheckmark } from 'react-icons/io';
 import { useState } from 'react';
 
-import { ReactComponent as GoogleIcon } from 'img/icons/google.svg';
-import { ReactComponent as FacebookIcon } from 'img/icons/facebook.svg';
+import GoogleIcon from '@img/icons/google.svg?react';
+import FacebookIcon from '@img/icons/facebook.svg?react';
 
 const {
   form,

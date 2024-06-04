@@ -1,4 +1,4 @@
-import About from 'components/About/About';
+import About from '@components/About';
 import { Helmet } from 'react-helmet';
 
 const AboutPage = () => {

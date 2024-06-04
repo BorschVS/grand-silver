@@ -1,4 +1,4 @@
-import Contacts from 'components/Contacts';
+import Contacts from '@components/Contacts';
 
 import { Helmet } from 'react-helmet';
 

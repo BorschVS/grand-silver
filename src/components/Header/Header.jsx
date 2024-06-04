@@ -1,12 +1,12 @@
 import styles from './Header.module.scss';
 import { useEffect, useState } from 'react';
-import Menu from 'components/Menu';
+import Menu from '@components/Menu';
 
-import { ReactComponent as LogoIcon } from 'img/icons/logo.svg';
+import LogoIcon from '@img/icons/logo.svg?react';
 
 import { Link } from 'react-router-dom';
 import MediaQuery from 'react-responsive';
-import Navigation from 'components/Navigation';
+import Navigation from '@components/Navigation';
 
 const { header, container, logo, login, scroll } = styles;
 
@@ -31,7 +31,9 @@ const Header = () => {
     <header className={header}>
       <div className={container}>
         <Link to="/">
-          <LogoIcon className={logo} />
+          <span className={logo}>
+          <LogoIcon />
+          </span>
         </Link>
         {!isOpen && (
           <button className={styles.button} onClick={() => toggleMenu()}>

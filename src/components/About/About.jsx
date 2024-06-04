@@ -2,7 +2,7 @@ import styles from './About.module.scss';
 
 import MediaQuery from 'react-responsive';
 
-import { images } from 'api/gallery';
+import { images } from '@api/gallery';
 
 const { about, container, wrapper, subtitle, picture, text, button, thumb } =
   styles;
