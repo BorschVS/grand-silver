@@ -9,6 +9,8 @@
       "@pages/*": ["pages/*"],
       "@api/*": ["api/*"],
       "@hooks/*": ["hooks/*"],
+      "@contexts/*": ["contexts/*"],
+
       "@fonts/*": ["fonts/*"]
     }
   },

@@ -1,9 +1,10 @@
-import Header from "../Header";
-import styles from "./Layout.module.scss";
-import { Suspense } from "react";
-import { Outlet } from "react-router-dom";
-import { ClipLoader } from "react-spinners";
-import Footer from "../Footer";
+import Header from '../Header';
+import styles from './Layout.module.scss';
+import { Suspense } from 'react';
+import { Outlet } from 'react-router-dom';
+import { ClipLoader } from 'react-spinners';
+import Footer from '../Footer';
+import ScrollToTop from '@components/ScrollToTop';
 
 const Layout = () => {
   return (
@@ -16,6 +17,7 @@ const Layout = () => {
           </div>
         }
       >
+        <ScrollToTop />
         <Outlet />
       </Suspense>
       <Footer />

@@ -1,0 +1,28 @@
+@import 'src/styles/shared.scss';
+
+.container {
+  width: clamp(300px, 60%, 800px);
+
+  display: block;
+  margin: 0 auto;
+
+  padding: 40px 20px;
+
+  @include fromTablet {
+    padding: 80px 40px;
+  }
+}
+
+.title {
+  font-size: 18px;
+  text-align: center;
+  margin-bottom: 48px;
+
+  @include fromTablet {
+    font-size: 24px;
+  }
+
+  @include desktop {
+    font-size: 30px;
+  }
+}

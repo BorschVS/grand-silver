@@ -1,6 +1,6 @@
-@import "./fonts";
-@import "./variables";
-@import "./colors";
+@import './fonts';
+@import './variables';
+@import './colors';
 
 body {
   margin: 0;
@@ -27,3 +27,14 @@ p {
   margin: 0;
   padding: 0;
 }
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  margin: 0;
+  padding: 0;
+} 

@@ -1,16 +1,13 @@
-import About from '@components/About';
 import DatePicker from '@components/DatePicker';
 import { Helmet } from 'react-helmet';
 
 const AboutPage = () => {
   return (
-    <main style={{margin: '30px 0'}}>
+    <main>
       <Helmet>
-        <title>About us</title>
+        <title>Book</title>
       </Helmet>
-      <About />
       <DatePicker />
-
     </main>
   );
 };

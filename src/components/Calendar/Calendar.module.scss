@@ -1,0 +1,33 @@
+@import 'src/styles/shared.scss';
+
+.calendar {
+  width: 100%;
+  font-family: $font-primary;
+  border-collapse: collapse;
+}
+
+.calendar th {
+  background-color: $primary-white;
+  padding: 8px;
+  text-align: center;
+}
+
+.calendar td {
+  padding: 8px;
+  text-align: center;
+}
+
+.calendar .weekday {
+  color: $medium-grey;
+  font-weight: 500;
+  text-transform: lowercase;
+}
+
+.calendar .day {
+  background-color: #ffffff;
+}
+
+.days tr {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr); /* Создает 7 столбцов равной ширины */
+}

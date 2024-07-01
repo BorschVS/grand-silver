@@ -11,7 +11,6 @@ const HomePage = () => {
       <Helmet>
         <title>GRAND SILVER</title>
       </Helmet>
-
       <Hero />
       <About />
       <Rooms />

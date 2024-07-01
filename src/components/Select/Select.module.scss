@@ -1,0 +1,58 @@
+@import 'src/styles/shared.scss';
+
+.selectСontainer {
+  width: 100%;
+  @extend %centeredBlock;
+  position: relative;
+}
+
+.select {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  
+  padding: 10px;
+  margin-bottom: 32px;
+  
+  background-color: $primary-white;
+  font-size: 16px;
+  color: $dark-grey;
+  cursor: pointer;
+  border: 1px solid $primary-black;
+
+ 
+
+  font-family: $font-primary;
+}
+
+.selectOptions {
+  width: 100%;
+  max-height: 200px;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: $primary-white;
+  overflow-y: auto;
+  z-index: 10;
+}
+
+.selectOption {
+  padding: 10px;
+  font-size: 16px;
+  color: #333;
+  cursor: pointer;
+  font-family: $font-primary;
+  border: 1px solid $primary-black;
+}
+
+.selectOption:not(:last-of-type) {
+  border-bottom: none;
+}
+
+.selectOption:first-of-type {
+  border-top: none;
+}
+
+.selectOption:hover {
+background-color: $primary-grey;
+}

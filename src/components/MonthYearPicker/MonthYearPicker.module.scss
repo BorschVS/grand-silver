@@ -1,0 +1,18 @@
+@import 'src/styles/shared.scss';
+
+.monthYearPicker {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 42px;
+
+  font-family: $font-primary;
+  line-height: 0;
+}
+
+.date {
+  width: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
