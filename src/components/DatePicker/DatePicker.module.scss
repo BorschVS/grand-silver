@@ -26,3 +26,8 @@
     font-size: 30px;
   }
 }
+
+.blur {
+  filter: blur(5px);
+  transition: filter $transition-default;
+}

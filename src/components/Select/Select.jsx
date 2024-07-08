@@ -1,20 +1,19 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 import styles from './Select.module.scss';
 
-const {
-  selectСontainer,
-  select,
-  selectArrow,
-  selectOptions,
-  selectOption,
-} = styles;
+const { selectСontainer, select, selectArrow, selectOptions, selectOption } =
+  styles;
 
 const options = [{ label: 'Бунгало' }, { label: 'Котедж' }, { label: 'Номер' }];
 
-const Select = () => {
+const Select = ({ isSelectOpen }) => {
   const [selectedOption, setSelectedOption] = useState(null);
   const [isOpen, setIsOpen] = useState(false);
+
+  useEffect(() => {
+    isSelectOpen(isOpen);
+  }, [isOpen]);
 
   const handleOptionClick = option => {
     setSelectedOption(option);

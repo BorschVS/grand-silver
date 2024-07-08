@@ -63,7 +63,7 @@ const About = () => {
           </MediaQuery>
 
           <button type="button" className={button}>
-            <StyledLink pathTo={'/book'}>Бронювати</StyledLink>
+            <StyledLink to={'/book'}>Бронювати</StyledLink>
           </button>
         </div>
         <MediaQuery minWidth={768}>

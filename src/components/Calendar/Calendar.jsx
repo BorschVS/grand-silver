@@ -1,5 +1,7 @@
-import React, { useState, useEffect, useContext } from 'react';
+import React, { useState, useEffect, useContext, useMemo } from 'react';
 import { DatePickerContext } from '@contexts/DatePickerContext';
+import { Bounce, ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 import styles from './Calendar.module.scss';
 
@@ -10,6 +12,22 @@ const Calendar = () => {
   const [calendarDays, setCalendarDays] = useState([]);
   const [firstDayOfMonth, setFirstDayOfMonth] = useState(0);
 
+  const [startDay, setStartDay] = useState(null);
+  const [endDay, setEndDay] = useState(null);
+
+  const notify = text =>
+    toast(text, {
+      position: 'top-center',
+      autoClose: 2000,
+      hideProgressBar: true,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: 'dark',
+      transition: Bounce,
+    });
+
   useEffect(() => {
     const daysInMonth = new Date(year, month + 1, 0).getDate();
     setFirstDayOfMonth(
@@ -17,12 +35,13 @@ const Calendar = () => {
         ? 6
         : new Date(year, month, 1).getDay() - 1
     );
-    console.log(firstDayOfMonth);
 
     const daysArray = Array.from({ length: daysInMonth }, (_, index) => {
       const dayOfMonth = index + 1;
       const dayOfWeek = (firstDayOfMonth + index + 7) % 7;
       return {
+        year,
+        month,
         day: dayOfMonth,
         dayOfWeek: WEEKDAYS[dayOfWeek],
       };
@@ -31,6 +50,64 @@ const Calendar = () => {
     setCalendarDays(daysArray);
   }, [year, month]);
 
+  const isDateInPast = (day, month, year) => {
+    const today = new Date();
+    const selectedDate = new Date(year, month, day);
+    return selectedDate < today;
+  };
+
+  const handleDayClick = day => {
+    const clickedDate = new Date(day.year, day.month, day.day);
+
+    if (isDateInPast(day.day, day.month, day.year)) {
+      notify('Оберіть дату у майбутньому');
+      return;
+    }
+
+    if (!startDay || (startDay && endDay)) {
+      setStartDay(day);
+      setEndDay(null);
+    } else if (startDay && !endDay) {
+      const startDate = new Date(startDay.year, startDay.month, startDay.day);
+      if (clickedDate < startDate) {
+        setStartDay(day);
+      } else {
+        setEndDay(day);
+      }
+    }
+  };
+
+  const isDayInRange = (day, month) => {
+    if (startDay && endDay) {
+      const startDate = new Date(startDay.year, startDay.month, startDay.day);
+      const endDate = new Date(endDay.year, endDay.month, endDay.day);
+      const currentDate = new Date(year, month, day);
+      return currentDate >= startDate && currentDate <= endDate;
+    }
+    return false;
+  };
+
+  const isToday = (day, month, year) => {
+    const today = new Date();
+    return (
+      day === today.getDate() &&
+      month === today.getMonth() &&
+      year === today.getFullYear()
+    );
+  };
+
+  const selectedDaysCount = useMemo(() => {
+    if (startDay && endDay) {
+      const startDate = new Date(startDay.year, startDay.month, startDay.day);
+      const endDate = new Date(endDay.year, endDay.month, endDay.day);
+      const timeDiff = endDate - startDate;
+      const daysDiff = timeDiff / (1000 * 60 * 60 * 24);
+      return daysDiff + 1;
+    }
+    return 0;
+  }, [startDay, endDay]);
+
+  console.log(selectedDaysCount);
   const renderCalendarRows = () => {
     const rows = [];
     let cells = [];
@@ -40,8 +117,31 @@ const Calendar = () => {
     }
 
     calendarDays.forEach((calendarDay, index) => {
+      const isSelected = isDayInRange(calendarDay.day, calendarDay.month);
+
+      const isStart =
+        calendarDay.day === startDay?.day &&
+        calendarDay.month === startDay?.month &&
+        startDay.day;
+      const isEnd =
+        calendarDay.day === endDay?.day && calendarDay.month === endDay?.month;
+
+      const isCurrentDay = isToday(
+        calendarDay.day,
+        calendarDay.month,
+        calendarDay.year
+      );
+
+      const cellStyles = `${styles.day} ${isSelected ? styles.selected : ''} ${
+        isStart ? styles.start : ''
+      } ${isEnd ? styles.end : ''} ${isCurrentDay ? styles.today : ''}`.trim();
+
       cells.push(
-        <td key={index} className={styles.day}>
+        <td
+          key={index}
+          className={cellStyles}
+          onClick={() => handleDayClick(calendarDay)}
+        >
           {calendarDay.day}
         </td>
       );
@@ -59,18 +159,21 @@ const Calendar = () => {
   };
 
   return (
-    <table className={styles.calendar}>
-      <thead>
-        <tr>
-          {WEEKDAYS.map((weekday, index) => (
-            <th key={index} className={styles.weekday}>
-              {weekday}
-            </th>
-          ))}
-        </tr>
-      </thead>
-      <tbody>{renderCalendarRows()}</tbody>
-    </table>
+    <section>
+      <ToastContainer />
+      <table className={styles.calendar}>
+        <thead>
+          <tr>
+            {WEEKDAYS.map((weekday, index) => (
+              <th key={index} className={styles.weekday}>
+                {weekday}
+              </th>
+            ))}
+          </tr>
+        </thead>
+        <tbody>{renderCalendarRows()}</tbody>
+      </table>
+    </section>
   );
 };
 

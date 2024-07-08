@@ -24,10 +24,27 @@
 }
 
 .calendar .day {
-  background-color: #ffffff;
+  cursor: pointer;
 }
 
 .days tr {
   display: grid;
-  grid-template-columns: repeat(7, 1fr); /* Создает 7 столбцов равной ширины */
+  grid-template-columns: repeat(7, 1fr);
+}
+
+.today {
+  background-color: $primary-white;
+  border: 1px solid $primary-black;
+}
+
+.selected {
+  background-color: $primary-grey;
+}
+
+.start {
+  background-color: $primary-grey;
+}
+
+.end {
+  background-color: $primary-grey;
 }

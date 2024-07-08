@@ -2,9 +2,9 @@ import { Link } from 'react-router-dom';
 import styles from './StyledLink.module.scss';
 import PropTypes from 'prop-types';
 
-const StyledLink = ({ pathTo, children }) => {
+const StyledLink = ({ to, children }) => {
   return (
-    <Link className={styles.link} to={pathTo}>
+    <Link className={styles.link} to={to}>
       {children}
     </Link>
   );
