@@ -1,1 +1,0 @@
-import{j as t}from"./index-DfO_hHMg.js";import{A as r}from"./About-BKJNA2kA.js";import"./ReactToastify-CbTCqS4R.js";import{H as o}from"./Helmet-DGPi6neQ.js";import"./gallery-DvrF1OPj.js";const x=()=>t.jsxs("main",{style:{margin:"30px 0"},children:[t.jsx(o,{children:t.jsx("title",{children:"About us"})}),t.jsx(r,{})]});export{x as default};

@@ -1,0 +1,1 @@
+import{j as r}from"./index-B6Yg6SNF.js";import{S as e}from"./Service-DHddyNvb.js";import{H as t}from"./Helmet-CJ6g1ZN9.js";import"./gallery-DvrF1OPj.js";import"./index.browser-DP16PUbO.js";import"./Picture-iuW0ESaZ.js";const a=()=>r.jsxs("main",{style:{margin:"30px 0"},children:[r.jsx(t,{children:r.jsx("title",{children:"Service"})}),r.jsx(e,{})]});export{a as default};
