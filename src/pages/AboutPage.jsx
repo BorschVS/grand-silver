@@ -4,13 +4,11 @@ import { Helmet } from 'react-helmet';
 
 const AboutPage = () => {
   return (
-    <main style={{margin: '30px 0'}}>
+    <main style={{ margin: '30px 0' }}>
       <Helmet>
         <title>About us</title>
       </Helmet>
       <About />
-      <DatePicker />
-
     </main>
   );
 };
