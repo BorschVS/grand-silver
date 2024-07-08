@@ -1,3 +1,4 @@
+import StyledLink from '@components/StyledLink';
 import styles from './Hero.module.scss';
 
 const { hero, overlay, container, title, text, button, shine } = styles;
@@ -12,7 +13,7 @@ const Hero = () => {
             Тут зливаються комфорт, та бездоганне обслуговування.
           </p>
           <button type="button" className={button}>
-            <span className={shine}>Бронювати</span>
+            <StyledLink to={'/book'}>Бронювати</StyledLink>
           </button>
         </div>
       </div>

@@ -23,7 +23,7 @@
   text-transform: lowercase;
 }
 
-.calendar .day {
+.day {
   cursor: pointer;
 }
 
@@ -39,12 +39,22 @@
 
 .selected {
   background-color: $primary-grey;
+  border-top: 1px solid $primary-black;
+  border-bottom: 1px solid $primary-black;
+  transition: background-color $transition-default;
 }
 
 .start {
+  border-top: 1px solid $primary-black;
+  border-bottom: 1px solid $primary-black;
+  border-left: 1px solid $primary-black;
   background-color: $primary-grey;
+
+  transition: background-color $transition-default;
 }
 
 .end {
+  border-right: 1px solid $primary-black;
   background-color: $primary-grey;
+  transition: background-color $transition-default;
 }

@@ -10,10 +10,10 @@ const root = createRoot(container);
 
 root.render(
   <React.StrictMode>
-    <DatePickerProvider>
-      <BrowserRouter basename="/grand-silver">
+    <BrowserRouter basename="/grand-silver">
+      <DatePickerProvider>
         <App />
-      </BrowserRouter>
-    </DatePickerProvider>
+      </DatePickerProvider>
+    </BrowserRouter>
   </React.StrictMode>
 );
