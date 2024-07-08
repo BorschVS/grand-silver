@@ -1,1 +1,0 @@
-import{j as o}from"./index-PyZXSmwe.js";import{R as r}from"./Rooms-CIkircvU.js";import{H as t}from"./Helmet-xp2_M3wh.js";import"./gallery-DvrF1OPj.js";import"./index.browser-DP16PUbO.js";import"./right-CiZ-hg19.js";const a=()=>o.jsxs("main",{style:{margin:"30px 0"},children:[o.jsx(t,{children:o.jsx("title",{children:"Rooms"})}),o.jsx(r,{})]});export{a as default};

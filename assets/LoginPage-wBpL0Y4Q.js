@@ -1,1 +1,0 @@
-import{j as r}from"./index-PyZXSmwe.js";import{L as o}from"./Login-Ul4fmxPm.js";import{H as t}from"./Helmet-xp2_M3wh.js";import"./Picture-DfpYr_FB.js";import"./gallery-DvrF1OPj.js";const p=()=>r.jsxs("main",{children:[r.jsx(t,{children:r.jsx("title",{children:"Login"})}),r.jsx(o,{})]});export{p as default};

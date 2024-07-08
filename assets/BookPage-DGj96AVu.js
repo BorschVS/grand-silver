@@ -1,0 +1,1 @@
+import{j as r}from"./index-CaEN8DkI.js";import{D as t}from"./DatePicker-DRqy9BlH.js";import{H as o}from"./Helmet-B6ufr6gj.js";import"./right-Omi4_Jvn.js";const a=()=>r.jsxs("main",{children:[r.jsx(o,{children:r.jsx("title",{children:"Book"})}),r.jsx(t,{})]});export{a as default};
