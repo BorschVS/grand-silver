@@ -107,7 +107,6 @@ const Calendar = () => {
     return 0;
   }, [startDay, endDay]);
 
-  console.log(selectedDaysCount);
   const renderCalendarRows = () => {
     const rows = [];
     let cells = [];
@@ -121,10 +120,9 @@ const Calendar = () => {
 
       const isStart =
         calendarDay.day === startDay?.day &&
-        calendarDay.month === startDay?.month &&
-        startDay.day;
+        calendarDay.month === startDay?.month && calendarDay.year === startDay?.year;
       const isEnd =
-        calendarDay.day === endDay?.day && calendarDay.month === endDay?.month;
+        calendarDay.day === endDay?.day && calendarDay.month === endDay?.month && calendarDay.year === endDay?.year;
 
       const isCurrentDay = isToday(
         calendarDay.day,
